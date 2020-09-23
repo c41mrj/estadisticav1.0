@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MenuActivity">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="botonDesplegarPruebasDeHipotesisVarConocida"
+        android:text="Calcular prueba de hipótesis para la media si se conoce la varianza poblacional" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="botonDesplegarPruebasDeHipotesisDesEDesconocida"
+        android:text="Calcular prueba de hipótesis para la media si se desconoce la varianza poblacional" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="botonDesplegarPruebasHipotesisVarianza"
+        android:text="Calcular prueba de hipótesis para la varianza" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="28dp"
+        android:text="Calcular prueba de hipótesis para la varianza"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:onClick="botonDesplegarPruebasDeHipotesisDesEDesconocida"
+        android:text="Button"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/pruebaHipotesisVarianza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:onClick="botonDesplegarPruebasHipotesisVarianza"
+        android:text="Button"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="52dp"
+        android:onClick="botonDesplegarPruebasHipotesisDiferenciaMediasVarConocidas"
+        android:text="Button"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/button27"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="botonDesplegarPruebasHipotesisDiferenciaMediasVarConocidas"
+        android:text="Calcular prueba de hipótesis para la diferencia de medias si se conocen las varianzas poblacionales" />
+
+</LinearLayout>

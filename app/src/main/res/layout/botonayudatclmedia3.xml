@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView48"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ABF60606"
+            android:text="Es preferible utilizar esta opción si se conoce el valor del nuevo promedio muestral a tener en cuenta." />
+
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#18E0FA"
+            android:gravity="center_horizontal"
+            android:text="Ejemplo:"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="¿Cuál será el tamaño mínimo de muestra que debe elegirse, si el fabricante afirma que su producto tiene en promedio una cantidad mayor a 49.9 kg de azucar en más de 95% de los bultos?" />
+    </LinearLayout>
+</LinearLayout>

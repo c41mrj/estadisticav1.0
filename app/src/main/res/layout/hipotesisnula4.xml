@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/hipotesisnula"
+        tools:context=".HIPOTESISNULATOAST"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="#FF9800"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="La hipótesis nula es una afírmación acerca de los valores que un parámetro estadístico (en éste caso el parámetro media poblacional) puede tomar.  " />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Un médico al estudiar cierto medicamento llegó a la conclusión de que el tiempo promedio en que hace efecto en los pacientes estará entre 40 y 50 minutos." />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="La afirmación del médico es que cierto medicamento tarda entre 40 y 50 minutos en hacerte efecto. Planteando un contraste de hipótesis adecuado tenemos:" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hipótesis nula= H0: 40 ≤µ≤ 50" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hipótesis alterna= H1: µ menor que 40 ó µ mayor que 50" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:text="Si la hipótesis nula NO SE RECHAZA, entonces la afirmación del médico es correcta, de lo contrario es incorrecta" />
+    </LinearLayout>
+</LinearLayout>

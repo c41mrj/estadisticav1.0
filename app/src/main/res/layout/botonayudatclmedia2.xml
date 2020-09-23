@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ABF60606"
+        android:text="Es preferible utilizar esta opción si se conoce la diferencia entre el promedio muestral y el promedio poblacional y se requiere una probabilidad menor o igual que." />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#18E0FA"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:text="Ejemplo:"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="¿Cuál será el tamaño mínimo de muestra que debe elegirse, si se desea que el diámetro promedio de una muestra de tornillos se dierencie en al menos 0.10 mm del verdadero diametro con una probabilidad menor a 0.05?" />
+</LinearLayout>

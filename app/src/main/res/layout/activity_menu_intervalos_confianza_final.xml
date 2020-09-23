@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuIntervalosConfianzaFinal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button15"
+                    android:layout_width="311dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:onClick="botonDesplegarIntervalos1"
+                    android:text="Calculadora para intervalos de confianza para la media de una población normal o aproximadamente normal cuando se conoce la varianza poblacional" />
+
+                <ImageButton
+                    android:id="@+id/imageButton15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.3"
+                    app:srcCompat="@android:drawable/ic_menu_help" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button18"
+                    android:layout_width="311dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:onClick="botonDesplegarIntervalos2"
+                    android:text="Calculadora para intervalos de confianza para la media de una población normal o aproximadamente normal cuando se desconoce la varianza poblacional" />
+
+                <ImageButton
+                    android:id="@+id/imageButton16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.3"
+                    app:srcCompat="@android:drawable/ic_menu_help" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button19"
+                    android:layout_width="336dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".07"
+                    android:onClick="botonDesplegarIntervalos3"
+                    android:text="Calculadora para intervalos de confianza para la diferencia de medias de dos poblaciones normales o aproximadamente normales cuando se conocen las varianzas poblacionales" />
+
+                <ImageButton
+                    android:id="@+id/imageButton17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.3"
+                    app:srcCompat="@android:drawable/ic_menu_help" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button26"
+                    android:layout_width="336dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:onClick="botonDesplegarIntervalos4"
+                    android:text="Calculadora para intervalos de confianza para la diferencia de medias si se desconocen las varianzas poblacionales pero se sabe son diferentes" />
+
+                <ImageButton
+                    android:id="@+id/imageButton23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    app:srcCompat="@android:drawable/ic_menu_help" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button20"
+                    android:layout_width="336dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:onClick="botonDesplegarIntervalos5"
+                    android:text="Calculadora para intervalos de confianza para la diferencia de medias de dos poblaciones normales o aproximadamente normales cuando se desconocen las varianzas poblacionales pero se sabe que son iguales" />
+
+                <ImageButton
+                    android:id="@+id/imageButton18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    app:srcCompat="@android:drawable/ic_menu_help" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button21"
+                    android:layout_width="311dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:onClick="botonDesplegarIntervalos6"
+                    android:text="Calculadora para intervalos de confianza para la varianza de una población normal o aproximadamente normal" />
+
+                <ImageButton
+                    android:id="@+id/imageButton19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    app:srcCompat="@android:drawable/ic_menu_help" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button22"
+                    android:layout_width="336dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:onClick="botonDesplegarIntervalos7"
+                    android:text="Calculadora para intervalos de confianza para la razón entre las varianzas ó desviaciones estándar para de dos poblaciones normales o aproximadamente normales" />
+
+                <ImageButton
+                    android:id="@+id/imageButton20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    app:srcCompat="@android:drawable/ic_menu_help" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button23"
+                    android:layout_width="311dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:onClick="botonDesplegarIntervalos8"
+                    android:text="Calculadora para proporciones" />
+
+                <ImageButton
+                    android:id="@+id/imageButton21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    app:srcCompat="@android:drawable/ic_menu_help" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button24"
+                    android:layout_width="311dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:onClick="botonDesplegarIntervalos9"
+                    android:text="Calculadora para diferencia de proporciones" />
+
+                <ImageButton
+                    android:id="@+id/imageButton22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    app:srcCompat="@android:drawable/ic_menu_help" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="botonQueHago"
+                android:text="¿Que opcion debo elegir si deseo calcular el intervalo de confianza para la diferencia de medias si desconozco las varianzas poblacionales y no se si son iguales o diferentes" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

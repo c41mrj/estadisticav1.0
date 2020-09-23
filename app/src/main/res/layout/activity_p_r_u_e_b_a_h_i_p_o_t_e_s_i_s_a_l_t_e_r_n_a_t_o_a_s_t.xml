@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF9800"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".PRUEBAHIPOTESISALTERNATOAST">
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="La hipótesis alterna es, así como la hipótesis nula, una afirmación acerca de los valores que un parametro estadístico (en éste caso el parámetro media poblacional) puede tomar. Pero hay que notar que la hipótesis alterna es contraria a la hipótesis nula. Por lo tanto la refuta" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Suponga que un fabricante de bombillas de luz asegura que su producto tiene una duracion promedio mayor a 810 horas. Plantee un contraste de hipotesis para poder aprobar o negar la afirmación" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="La afirmación del fabricante es que la duración promedio de su producto es igual a 810 horas. Planteando el contraste de hipótesis tenemos que:" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hipótesis nula= H0: µ ≤ 810" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hipótesis alterna= H1: µ > 810" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:text="Si la hipótesis nula SE RECHAZA, entonces la afirmación del fabricante es correcta, de lo contrario es incorrecta" />
+
+</LinearLayout>

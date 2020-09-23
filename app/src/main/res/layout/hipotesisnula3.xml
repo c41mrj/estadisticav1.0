@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/hipotesisnula"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="#FF9800"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:context=".HIPOTESISNULATOAST">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="La hipótesis nula es una afírmación acerca de los valores que un parámetro estadístico (en éste caso el parámetro media poblacional) puede tomar.  " />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Se lleva a cabo un estudio sobre los envases de un lubricante especìfico, para lo cual se toma una muestra aleatoria de 10 envases. El fabricante afirma que el contenido medio de los envases serà de por lo menos 9.5 litros."></TextView>
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="La afirmaciòn del fabricante es que el contenido promedio de los envases de su lubricante es mayor o igual que 9.5 litros. Planteando un contraste de hipòtesis adecuado tenemos:" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="Hipótesis nula= H0: µ ≥ 9.5" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="Hipótesis alterna=H1: µ menor que  9.5" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:text="Si la hipótesis nula NO SE RECHAZA, entonces la afirmación del fabricante es correcta, de lo contrario es incorrecta" />
+    </LinearLayout>
+</LinearLayout>

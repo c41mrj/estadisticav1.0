@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFAD34"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="inherit"
+        android:text="El valor de Z se puede interpretar cómo la diferencia entre un valor de interés (en éste caso el promedio muestral) y el promedio poblacional, ésta diferencia expresada en desviaciónes estándar. Para una mejor comprensión se sugiere tomar en cuenta el siguiente ejemplo:"
+         />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Supongamos que un investigador realizó un estudio, donde dice que el promedio de edad de las personas de cierta comunidad es de 25 años, con una desviación estándar de 3.68 años. Y ahora supongamos que el valor de interés es de 30 años. El valor correspondiente de Z será:"
+        android:textAlignment="inherit" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/valorzetaejemplo" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Una interpretación para éste valor Z calculado es que la edad de 30 años está a 1.29 desviaciónes estándar sobre el promedio" />
+
+</LinearLayout>

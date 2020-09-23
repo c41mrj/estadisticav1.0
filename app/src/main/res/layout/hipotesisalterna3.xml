@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        tools:context=".PRUEBAHIPOTESISALTERNATOAST"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF9800"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="La hipótesis alterna es, así como la hipótesis nula, una afirmación acerca de los valores que un parametro estadístico (en éste caso el parámetro media poblacional) puede tomar. Pero hay que notar que la hipótesis alterna es contraria a la hipótesis nula. Por lo tanto la refuta" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Los instrumentos de precisión utilizados por la profeco para supervisar están diseñados para proporcionar una medición que se considera solo correcta en promedio. Los clientes de una gasolinera se han quejado ante la profeco de que reciben en promedio menos gasolina que la marcada en el medidor. Suponga que el dueño de la gasolinera afirma que en promedio su bomba de gasolina despacha 19.7 litros." />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="La afirmación de los clientes molestos es que en promedio la bomba despacha menos gasolina que la prometida. Planteando el contraste de hipótesis tenemos que:" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="Hipótesis nula= H0: µ ≥ 19.7" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="Hipótesis alterna= H1: µ menor que 19.7" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:text="Si la hipótesis nula SE RECHAZA, entonces la afirmación del fabricante es correcta, de lo contrario es incorrecta" />
+
+    </LinearLayout>
+</LinearLayout>

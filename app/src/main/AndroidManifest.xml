@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.estadistica">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Calculadora Estadìstica"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".INTERFAZPRUEBASHIPDIFERENCIAMEDIASVARIANZASCONOCIDAS"></activity>
+        <activity android:name=".MenuIntervalosConfianzaFinal" />
+        <activity android:name=".PRUEBAHIPOTESISALTERNATOAST" />
+        <activity android:name=".HIPOTESISNULATOAST" />
+        <activity android:name=".INTERFAZPRUEBASDEHIPOTESISVARIANZACONOCIDA" />
+        <activity android:name=".ICDIFMEDIASVARDESCONOCIDASPERODIFERENTESPASANDOPARAMETROS" />
+        <activity android:name=".INTERFAZDIFMEDIASVARDESCONOCIDASPEROIGUALESPASANDOPARAMETROS" />
+        <activity android:name=".INTERFAZICRAZONENTREVARIANZAS" />
+        <activity
+            android:name=".INTERFAZICVARIANZA"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".INTERFAZICDIFMEDIAS4"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".INTERFAZICDIFMEDIAS3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".INTERFAZICDIFMEDIAS2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".INTERFAZICDIFERENCIAMEDIASVARIANZASCONOCIDAS"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuRegresionLineal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".INTERVALOSCONFIANZAIU2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".INTERVALOCONFIANZA1IU"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TCLIMITEDIFERENCIAPROPORCIONES"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TCLIMITESUMAIU"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TCLIMITEDIFERENCIAMEDIASIU"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TLCPROPORCIONESIU"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TCLMEDIAIU"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PHIPDIFMVARDESCON"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PruebaHipotesisVarianza"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PruebaHipDEDesconocida"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PruebaHip"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BUSCARVALORENTABLAZSIU"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".menu_teorema_central_limite"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".menuIntervalosConfianza"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".INTERFAZICPROPORCIONES"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".INTERFAZICDIFERENCIAPROPORCIONES"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuGeneral"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

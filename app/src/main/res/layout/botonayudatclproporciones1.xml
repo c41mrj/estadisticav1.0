@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ABF60606"
+            android:text="Es preferible utilizar esta opción si se conoce el valor de la nueva proporción deseada." />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#18E0FA"
+            android:gravity="center_horizontal"
+            android:text="Ejemplo:"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="En un proceso de llenado de botellas de soda, 8% del total no se llenan por completo. Un comprador potencial del producto decide que rechazará un gran lote de compra, si al seleccionar una muestra el porcentaje de botellas que no están completamente llenas es mayor a 7% con una probabilidad superior a 85%. ¿Cual és el tamaño mínimo de muestra para que no se compre el lote?" />
+    </LinearLayout>
+</LinearLayout>
