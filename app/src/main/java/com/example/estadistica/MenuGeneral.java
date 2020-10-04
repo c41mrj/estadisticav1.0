@@ -37,7 +37,7 @@ public class MenuGeneral extends AppCompatActivity  implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.tcl:
-                i = new Intent(this,menuIntervalosConfianza.class);
+                i = new Intent(this,menu_teorema_central_limite.class);
                 startActivity(i);
                 break;
             case R.id.ic:
