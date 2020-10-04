@@ -1,37 +1,61 @@
 package com.example.estadistica;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MenuGeneral extends AppCompatActivity {
+public class MenuGeneral extends AppCompatActivity  implements View.OnClickListener {
+
+     CardView tcl, intC,PH,RL,PM;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_general);
+
+        tcl = (CardView) findViewById(R.id.tcl);
+        intC = (CardView) findViewById(R.id.ic);
+        PH = (CardView) findViewById(R.id.ph);
+        RL = (CardView) findViewById(R.id.rl);
+
+
+        tcl.setOnClickListener(this);
+        intC.setOnClickListener(this);
+        PH.setOnClickListener(this);
+        RL.setOnClickListener(this);
+
+
+
     }
 
+    @Override
+    public void onClick(View v) {
 
-    public void botonDesplegarMenuTCL(View vista){
-        Intent intento = new Intent(this,menu_teorema_central_limite.class);
-        startActivity(intento);
-    }
+        Intent i;
 
-    public void botonDesplegarMenuIntervalosConfianza(View view){
-        Intent intento = new Intent(this,MenuIntervalosConfianzaFinal.class);
-        startActivity(intento);
-    }
+        switch (v.getId()){
+            case R.id.tcl:
+                i = new Intent(this,menuIntervalosConfianza.class);
+                startActivity(i);
+                break;
+            case R.id.ic:
+                i = new Intent(this,menuIntervalosConfianza.class);
+                startActivity(i);
+                break;
+            case R.id.ph:
+                i = new Intent(this,menuIntervalosConfianza.class);
+                startActivity(i);
+                break;
+            case R.id.rl:
+                i = new Intent(this,menuIntervalosConfianza.class);
+                startActivity(i);
+                break;
 
-    public void botonDesplegarMenuPruebasHipotesis(View view){
-        Intent intento = new Intent(this,MenuActivity.class);
-        startActivity(intento);
-    }
 
-    public void botonDesplegarMenuRegresionLinealSimpleyMultiple(){
-        Intent intento = new Intent(this,MenuRegresionLineal.class);
-        startActivity(intento);
+        }
+
     }
 
 }
