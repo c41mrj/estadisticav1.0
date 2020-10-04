@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ABF60606"
+            android:text="Es preferible utilizar esta opción si se desea calcular probabilidades para la distribución muestral de una diferencia de proporciones." />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#18E0FA"
+            android:gravity="center_horizontal"
+            android:text="Ejemplo:"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Con respecto a las elecciones para presidente en México de 2012, se tom+p una muestra aleatoria de 200 personas y resultó qué 60 de ellas estuvieron a favor del candidato Andrés Manuel López Obrador, mientras que en una segunda muestra aleatoria de 300 personas, resultó que 80 estaban a favor del candidato Enrique Peña Nieto en la misma contienda electoral. Al suponer que los porcentajes de simpatizantes para López Obrador y Peña Nieto son 36% y22% respectivamente, calcule en qué porcentaje de muestras independientes de 200 y 300 personas, respectivamente, se cumple que la diferencia de proporciones es mayor que el 20%"/>
+    </LinearLayout>
+</LinearLayout>

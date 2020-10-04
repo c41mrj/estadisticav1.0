@@ -18,7 +18,11 @@ public class INTERFAZICDIFMEDIAS2 extends AppCompatActivity {
     private int tamMuestral1,tamMuestral2;
     private CalculoTablas redondeo = new CalculoTablas();
 
-
+/*
+*
+* Varianzas desconocidas pero iguales
+*
+* */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
