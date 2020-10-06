@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MenuPruebasHip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/header"
+        android:orientation="vertical"
+        tools:context=".MenuTCL">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Estadística VPRO"
+                android:textColor="#0f5c5c"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titulo"
+                android:layout_marginTop="60dp"
+                android:text="Calculadora para Intervalos de Confianza"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="120dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="-15dp"
+                android:src="@drawable/logo" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:columnOrderPreserved="false"
+                    android:paddingTop="30dp"
+                    android:rowCount="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tcl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageView16"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/logo" />
+
+                            <TextView
+                                android:id="@+id/tv1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:clickable="true"
+                                android:text="Pruebas de hipótesis para la media de una población normal o aproximadamente normal si se conoce la desviación estándar poblacional (σ)"
+                                android:textColor="#0f5c5c"
+                                android:textSize="12.4sp" />
+
+                            <ImageButton
+                                android:id="@+id/imageButton33"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ovalo"
+                                android:src="@android:drawable/ic_menu_help" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/logo" />
+
+                            <TextView
+                                android:id="@+id/tv2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:text="Pruebas de hipótesis para la media de una población normal o aproximadamente normal para la media de una población si se desconoce la desviación estándar poblacional (σ)"
+                                android:textColor="#0f5c5c"
+                                android:textSize="12.4sp" />
+
+                            <ImageButton
+                                android:id="@+id/imageButton34"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ovalo"
+                                android:src="@android:drawable/ic_menu_help" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/logo" />
+
+                            <TextView
+                                android:id="@+id/tv3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:text="Prueba de hipótesis para la varianza o desviación estándar de una muestra normal o aproximadamente normal"
+                                android:textColor="#0f5c5c"
+                                android:textSize="12.4sp" />
+
+                            <ImageButton
+                                android:id="@+id/imageButton35"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ovalo"
+                                android:src="@android:drawable/ic_menu_help" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/r2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/logo" />
+
+                            <TextView
+                                android:id="@+id/tv4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rg"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:text="Pruebas de hipótesis para la diferencia de medias si se conocen las desviaciones estándar (σ1 y σ2)"
+                                android:textColor="#0f5c5c"
+                                android:textSize="12.4sp" />
+
+                            <ImageButton
+                                android:id="@+id/imageButton36"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ovalo"
+                                android:src="@android:drawable/ic_menu_help" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/logo" />
+
+                            <TextView
+                                android:id="@+id/tv5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rg"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:text="Pruebas de hipótesis para la diferencia de medias si  se desconocen las desviaciones estándar poblacionales pero se sabe que son iguales (σ1 = σ2)"
+                                android:textColor="#0f5c5c"
+                                android:textSize="12.4sp" />
+
+                            <ImageButton
+                                android:id="@+id/imageButton37"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ovalo"
+                                android:src="@android:drawable/ic_menu_help" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/efe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/logo" />
+
+                            <TextView
+                                android:id="@+id/tv6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rg"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:text="Pruebas de hipótesis para la diferencia de medias si se desconocen las desviaciones estándar poblacionales pero se sabe que son diferentes (σ1 ≠ σ2)"
+                                android:textColor="#0f5c5c"
+                                android:textSize="12.4sp" />
+
+                            <ImageButton
+                                android:id="@+id/imageButton38"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ovalo"
+                                android:src="@android:drawable/ic_menu_help" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/efesi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/logo" />
+
+                            <TextView
+                                android:id="@+id/tv7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rg"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:text="Pruebas de hipótesis para la razón entre varianzas de dos poblaciones normales o aproximadamente normales"
+                                android:textColor="#0f5c5c"
+                                android:textSize="12.4sp" />
+
+                            <ImageButton
+                                android:id="@+id/imageButton39"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ovalo"
+                                android:src="@android:drawable/ic_menu_help" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/efes2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/logo" />
+
+                            <TextView
+                                android:id="@+id/tv8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rg"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:text="Pruebas de hipótesis para proporciones"
+                                android:textColor="#0f5c5c"
+                                android:textSize="12.4sp" />
+
+                            <ImageButton
+                                android:id="@+id/imageButton40"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ovalo"
+                                android:src="@android:drawable/ic_menu_help" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/efes3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/logo" />
+
+                            <TextView
+                                android:id="@+id/tv9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rg"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:text="Pruebas de hipótesis para la diferencia de proporciones"
+                                android:textColor="#0f5c5c"
+                                android:textSize="12.4sp" />
+
+                            <ImageButton
+                                android:id="@+id/imageButton41"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ovalo"
+                                android:src="@android:drawable/ic_menu_help" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </GridLayout>
+
+                <Button
+                    android:id="@+id/button28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ovalo"
+                    android:text="¿Que opción debo elegir si no se absolutamente nada de las desviaciones estándar poblaciobales?" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

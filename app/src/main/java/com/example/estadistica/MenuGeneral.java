@@ -40,11 +40,10 @@ public class MenuGeneral extends AppCompatActivity {
         PH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
+                Intent intent = new Intent(getApplicationContext(),MenuPruebasHip.class);
                 startActivity(intent);
             }
         });
-
 
 
     }
