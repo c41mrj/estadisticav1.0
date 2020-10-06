@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".MenuPruebasHip"></activity>
         <activity android:name=".MenuTCL" />
         <activity android:name=".INTERFAZPRUEBASHIPDIFERENCIAMEDIASVARIANZASCONOCIDAS" />
         <activity android:name=".MenuIntervalosConfianzaFinal" />
