@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ABF60606"
+            android:text="Es preferible utilizar esta opción si se desea calcular un intervalo de confianza para la media de una población normal o aproximadamente normal si se conoce la desviación estándar poblacional." />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#18E0FA"
+            android:gravity="center_horizontal"
+            android:text="Ejemplo:"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Una máquina de refrescos está ajustada de tal manera que la cantidad de líquido despachado tiene una distribución apróximadamente normal con una desviación estándar de 0.15 dl. Encuentre un intervalo de confianza de 95% para la verdadera media de los refrescos que sirve la máquina, si una muestra aleatoria de 36 refrescos tiene un contenido promedio de 2.25 dl." />
+    </LinearLayout>
+</LinearLayout>

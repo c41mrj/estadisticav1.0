@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ABF60606"
+            android:text="Es preferible utilizar esta opción si se desea calcular probabilidades para la distribución muestral de una suma." />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#18E0FA"
+            android:gravity="center_horizontal"
+            android:text="Ejemplo:"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Suponga que el peso de los paquetes de café de cierto tipo tiene una media de 1kg y desviación estándar de 0.05 kg, si en una caja se colocan 64 de esos paquetes ¿Cuál es la probabilidad de que el peso total de los 64 paquetes de café esté entre 63 y 64.5 kilogramos?" />
+    </LinearLayout>
+</LinearLayout>

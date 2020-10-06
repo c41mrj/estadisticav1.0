@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ABF60606"
+            android:text="Es preferible utilizar esta opción si se desea calcular probabilidades para la distribución muestral de una diferencia de medias." />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#18E0FA"
+            android:gravity="center_horizontal"
+            android:text="Ejemplo:"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Las calificaciones de los exámenes de admisión a la licenciatura en la ciudad de méxico tienen una media de 64 con una varianza de 200, pero se desconoce su distribución. De igual manera, las calificaciones de los aspirantes a ingresar a la licenciatura en Monterrey tienen una media de 60 con una varianza de 100. Calcule la probabilidad de que al tomar dos muestras aleatorias de tamaños 100 y 50 de aspirantes a licenciatura de la ciudad de México y Monterrey, respectivamente, el promedio de los aspirantes de Monterrey sea mayor a la de los de la ciudad de mexico" />
+    </LinearLayout>
+</LinearLayout>

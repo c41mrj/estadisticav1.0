@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MenuGeneral extends AppCompatActivity  implements View.OnClickListener {
+public class MenuGeneral extends AppCompatActivity {
 
      CardView tcl, intC,PH,RL,PM;
     @Override
@@ -21,40 +21,31 @@ public class MenuGeneral extends AppCompatActivity  implements View.OnClickListe
         RL = (CardView) findViewById(R.id.rl);
 
 
-        tcl.setOnClickListener(this);
-        intC.setOnClickListener(this);
-        PH.setOnClickListener(this);
-        RL.setOnClickListener(this);
+        tcl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MenuTCL.class);
+                startActivity(intent);
+            }
+        });
+
+        intC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MenuIntervalosConfianzaFinal.class);
+                startActivity(intent);
+            }
+        });
+
+        PH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
-
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        Intent i;
-
-        switch (v.getId()){
-            case R.id.tcl:
-                i = new Intent(this,menu_teorema_central_limite.class);
-                startActivity(i);
-                break;
-            case R.id.ic:
-                i = new Intent(this,menuIntervalosConfianza.class);
-                startActivity(i);
-                break;
-            case R.id.ph:
-                i = new Intent(this,menuIntervalosConfianza.class);
-                startActivity(i);
-                break;
-            case R.id.rl:
-                i = new Intent(this,menuIntervalosConfianza.class);
-                startActivity(i);
-                break;
-
-
-        }
 
     }
 

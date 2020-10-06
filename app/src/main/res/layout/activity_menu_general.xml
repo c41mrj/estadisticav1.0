@@ -39,10 +39,11 @@
                 android:layout_height="wrap_content"/>
 
             <ImageView
-                android:src="@drawable/logo"
+                android:layout_width="111dp"
+                android:layout_height="120dp"
                 android:layout_alignParentRight="true"
-                android:layout_width="381px"
-                android:layout_height="452px"/>
+                android:layout_marginRight="-15dp"
+                android:src="@drawable/logo" />
 
 
         </RelativeLayout>
@@ -70,7 +71,7 @@
                     >
 
                     <LinearLayout
-                        android:layout_width="166dp"
+                        android:layout_width="150dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:orientation="vertical"
@@ -105,7 +106,7 @@
                     >
 
                     <LinearLayout
-                        android:layout_width="173dp"
+                        android:layout_width="150dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:orientation="vertical"
@@ -139,31 +140,33 @@
                     app:cardCornerRadius="12dp"
                     android:layout_margin="12dp"
                     >
+
                     <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:padding="16dp"
                         android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:padding="16dp">
+
                         <ImageView
-                            android:layout_gravity="center"
-                            android:src="@drawable/logo"
-                            android:layout_height="80dp"
                             android:layout_width="80dp"
-                            />
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/logo" />
+
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="12dp"
-                            android:textColor="#0f5c5c"
-                            android:textSize="12.4sp"
                             android:text="Prueba hipótesis"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:textColor="#0f5c5c"
+                            android:textSize="12.4sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/rl"
+                    android:id="@+id/errele"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
@@ -172,35 +175,38 @@
                     app:cardCornerRadius="12dp"
                     android:layout_margin="12dp"
                     >
+
                     <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:padding="16dp"
                         android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:padding="16dp">
+
                         <ImageView
-                            android:layout_gravity="center"
-                            android:src="@drawable/logo"
-                            android:layout_height="80dp"
                             android:layout_width="80dp"
-                            />
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/logo" />
+
                         <TextView
                             android:id="@+id/rg"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="12dp"
-                            android:textColor="#0f5c5c"
-                            android:textSize="12.4sp"
-                            android:text="Regresión Lineal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:layout_below="@+id/rg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:layout_marginTop="12dp"
+                            android:text="Regresión Lineal"
                             android:textColor="#0f5c5c"
-                            android:textSize="12.4sp"
-                            android:text="simple y multiple."/>
+                            android:textSize="12.4sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rg"
+                            android:layout_gravity="center"
+                            android:text="simple y multiple."
+                            android:textColor="#0f5c5c"
+                            android:textSize="12.4sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
