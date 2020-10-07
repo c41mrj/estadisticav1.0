@@ -18,7 +18,7 @@ public class MenuTCL extends AppCompatActivity {
     }
 
     public void botonTLC1(View vista){
-        Intent intent = new Intent(this,TCLMEDIAIU.class);
+        Intent intent = new Intent(this, CTM.class);
         startActivity(intent);
     }
 
