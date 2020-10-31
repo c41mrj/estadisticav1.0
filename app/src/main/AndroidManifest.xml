@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MenuPruebasHip"></activity>
+        <activity android:name=".CTM"></activity>
+        <activity android:name=".VistaIntervalosConfianza" />
+        <activity android:name=".MenuPruebasHip" />
         <activity android:name=".MenuTCL" />
         <activity android:name=".INTERFAZPRUEBASHIPDIFERENCIAMEDIASVARIANZASCONOCIDAS" />
         <activity android:name=".MenuIntervalosConfianzaFinal" />
@@ -19,6 +21,9 @@
         <activity android:name=".ICDIFMEDIASVARDESCONOCIDASPERODIFERENTESPASANDOPARAMETROS" />
         <activity android:name=".INTERFAZDIFMEDIASVARDESCONOCIDASPEROIGUALESPASANDOPARAMETROS" />
         <activity android:name=".INTERFAZICRAZONENTREVARIANZAS" />
+        <activity
+            android:name=".MenuGeneral"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".INTERFAZICVARIANZA"
             android:screenOrientation="portrait" />
@@ -89,7 +94,7 @@
             android:name=".INTERFAZICDIFERENCIAPROPORCIONES"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MenuGeneral"
+            android:name=".MenuAuxiliar"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

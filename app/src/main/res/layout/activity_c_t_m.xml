@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/header"
+    android:orientation="vertical"
+    tools:context=".CTM">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:id="@+id/titulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_horizontal"
+                        android:text="TEOREMA CENTRAL DEL LIMITE"
+                        android:textColor="#0f5c5c"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/subtitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo"
+                        android:layout_marginTop="11dp"
+                        android:gravity="center"
+                        android:text="Selecciona la opción que deseas."
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:paddingTop="10dp">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="273dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:foregroundGravity="center"
+                        android:gravity="left"
+                        android:spinnerMode="dialog"></Spinner>
+
+                    <ImageView
+                        android:id="@+id/botonayuda"
+                        android:layout_width="47dp"
+                        android:layout_height="39dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/spinner"
+                        android:layout_toRightOf="@+id/spinner"
+                        app:srcCompat="@drawable/signodeinterrogacion" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tres"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="4">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/mediap" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Media poblacional"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/desviacionestandar"
+                                    app:srcCompat="@drawable/dados" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Desviación estandar"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/nuevopromedio" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Nuevo promedio"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </GridLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/datosTamMinimoMuestraMedia1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="4">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/desviacionestandar" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Desviación estandar"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/probabilidad"
+                                    app:srcCompat="@drawable/dados" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Probabilidad"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/diferencia" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Diferencia"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </GridLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/datosTCLMedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="4">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/mediap" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Media Poblacional"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/desviacionestandar" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Desviación estandar"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/promediomuestra" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Promedio Muestral"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/tmuestra" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Tamaño de muestra"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </GridLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menuv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </RelativeLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/botoncalcular"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/calculadora" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardViewResultado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/Resultado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="El resultado es:" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.gridlayout.widget.GridLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutProcedimientoIC"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/textView67"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="Datos:"
+                        android:textAlignment="center" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="205dp"
+                        android:background="@color/cardview_light_background">
+
+                        <TableLayout
+                            android:layout_width="154dp"
+                            android:layout_height="205dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="90dp"
+                            android:layout_marginRight="90dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/imageView10"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    app:srcCompat="@drawable/mediap" />
+
+                                <TextView
+                                    android:id="@+id/textView80"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=10" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/imageView13"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/desviacionestandar" />
+
+                                <TextView
+                                    android:id="@+id/textView90"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=1.25" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/imageView14"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/nuevopromedio" />
+
+                                <TextView
+                                    android:id="@+id/textView91"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=10.12" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/imagenDato1tamMinMuestraTclMedia"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/tmuestra" />
+
+                                <TextView
+                                    android:id="@+id/textView92"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=40" />
+                            </TableRow>
+
+                        </TableLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/textView94"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:text="Paso 1:"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView93"
+                        android:layout_width="390dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="El primer caso para calcular la probabilidad deseada es calcular el valor del estadístico de prueba Z para la media, que posteriormente buscaremos en las tablas de la distribución acumulada normal estándar. Para realizar el cálculo podemos apoyarnos del siguiente teorema:" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="12dp">
+
+                        <ImageView
+                            android:id="@+id/imageView17"
+                            android:layout_width="129dp"
+                            android:layout_height="67dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginLeft="21dp"
+                            android:layout_marginTop="92dp"
+                            app:srcCompat="@drawable/tlc_estadisticoz" />
+
+                        <TextView
+                            android:id="@+id/textView95"
+                            android:layout_width="133dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginEnd="71dp"
+                            android:layout_marginRight="71dp"
+                            android:background="#9774FA"
+                            android:text="¿Que representa z?" />
+
+                        <TextView
+                            android:id="@+id/textView97"
+                            android:layout_width="179dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView95"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@+id/imageView17"
+                            android:layout_toRightOf="@+id/imageView17"
+                            android:background="@drawable/border"
+                            android:text="El valor de z se puede interpretar cómo la diferencia entre un valor de interés cómo la diferencia entre un valor de interés(en éste caso el promedio muestral) y el promedio poblacional; esta diferencia expresada en desviaciones estándar. Para comprender mejor se sugiere tomar en cuenta el siguiente ejemplo" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/textView98"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Paso 2:"
+                        android:textAlignment="center" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="275dp"
+                            android:layout_height="wrap_content"
+                            android:text="Despues de sustituir los valores correspondientes en el teorema presentado anteriormente obtenemos que en este caso Z=0.607. Ahora se hace necesario buscar ell valor calculado del estadístico Z en las tablas de la distribución normal estándar" />
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginStart="45dp"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="21dp"
+                            android:layout_marginRight="21dp"
+                            android:background="@drawable/ovalo"
+                            app:srcCompat="@drawable/signodeinterrogacion" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/textView100"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="#80D8FF"
+                        android:gravity="center_horizontal"
+                        android:text="Conclusión:"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView101"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="El valor encontrado en las tablas de la distribución normal estándar es: 0.72808. Por lo tanto la probabilidad de que el promedio muestral sea menor o igual que 10.12 es de: 0.72808 = 72.808%"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutProcedimientoTamMinimoMuestra"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/textView69"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="Datos:"
+                        android:textAlignment="center" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/cardview_light_background">
+
+                        <TableLayout
+                            android:layout_width="154dp"
+                            android:layout_height="205dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="110dp"
+                            android:layout_marginRight="110dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/imagen1Tabla2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/tmuestra" />
+
+                                <TextView
+                                    android:id="@+id/dato1Tabla2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=40" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/imagen2Tabla2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/nuevopromedio" />
+
+                                <TextView
+                                    android:id="@+id/dato2Tabla2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=10.12" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/imagen3Tabla2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/desviacionestandar" />
+
+                                <TextView
+                                    android:id="@+id/dato3Tabla2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=1.25" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/imagen4Tabla2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    app:srcCompat="@drawable/mediap" />
+
+                                <TextView
+                                    android:id="@+id/dato4Tabla2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=10" />
+
+                            </TableRow>
+
+                        </TableLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/textView79"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:text="Paso 1:"
+                        android:textAlignment="center" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/paso1Layout2"
+                            android:layout_width="284dp"
+                            android:layout_height="wrap_content"
+                            android:text="Para calcular el tamaño mínimo de muestra se hace necesario buscar el valor de en las tablas acumuladas de la distribución normal estándar, donde: en este caso el valor encontrado en tablas es -1.96" />
+
+                        <ImageView
+                            android:id="@+id/botonayuda2"
+                            android:layout_width="42dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="52dp"
+                            android:layout_marginLeft="52dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/paso1Layout2"
+                            android:layout_toRightOf="@+id/paso1Layout2"
+                            android:background="@drawable/ovalo"
+                            app:srcCompat="@drawable/signodeinterrogacion" />
+
+                        <TextView
+                            android:id="@+id/textView68"
+                            android:layout_width="96dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/botonayuda2"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@+id/paso1Layout2"
+                            android:layout_toRightOf="@+id/paso1Layout2"
+                            android:text="¿Cómo busco los valores en tablas?" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/textView102"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Paso 2:" />
+
+                    <RelativeLayout
+                        android:layout_width="395dp"
+                        android:layout_height="311dp">
+
+                        <TextView
+                            android:id="@+id/textView103"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="El segundo y ultimo paso para calcular el tamaño mínimo de muestra es sustituir los valores correspondientes en la fórmula siguiente:" />
+
+                        <ImageView
+                            android:id="@+id/imageView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView103"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginStart="37dp"
+                            android:layout_marginLeft="37dp"
+                            android:layout_marginTop="18dp"
+                            app:srcCompat="@drawable/tamminimomuestratclcaso1" />
+
+                        <TableLayout
+                            android:layout_width="156dp"
+                            android:layout_height="182dp"
+                            android:layout_below="@+id/textView103"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginStart="26dp"
+                            android:layout_marginLeft="26dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_toEndOf="@+id/imageView15"
+                            android:layout_toRightOf="@+id/imageView15">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/tmuestra" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=40" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/nuevopromedio" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=10.12" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/desviacionestandar" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=1.25" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    app:srcCompat="@drawable/mediap" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=10" />
+
+                            </TableRow>
+
+                        </TableLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ABF60606"
-            android:text="Es preferible utilizar esta opción si se desea calcular un intervalo de confianza para la media de una población normal o aproximadamente normal si se desconoce la desviación estándar poblacional." />
+            android:text="Es preferible utilizar esta opción si se desea calcular un intervalo de confianza para la razón entre varianzas o razón entre desviaciónes estándar de dos poblaciones normales o aproximadamente normales." />
 
         <TextView
             android:id="@+id/textView44"
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Un antropólogo midió el ancho (en centímetros) de una muestra aleatoria de nueve cráneos de los miembros de cierta tribú, cuyos resultados fueron:" />
+            android:text="Las pruebas de tracción en diez puntos de soldadura en un dispositivo semiconductor produjeron los siguientes resultados en libras requeridas para romper la soldadura:" />
 
         <TextView
             android:id="@+id/textView18"
@@ -41,13 +41,21 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="#29F122"
-            android:text="13.3  14.2  13.5  16.7  11.1  13.1  13.0  12.2  13.0" />
+            android:text="15.8  12.7  13.2  16.9  10.6  18.8  11.1  14.3  17.0  12.5" />
 
         <TextView
             android:id="@+id/textView51"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Estime un intervalo de confianza de 95% para la varianza poblacional de dicha tribu." />
+            android:text="Otro conjunto de ocho puntos fueron probados después de recibir el dispositivo para determinar si la resistencia a la tracción se incrementa con el recubrimiento, se obtuvieron los siguientes resultados" />
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#29F122"
+            android:text="15.8  12.7  13.2  16.9  10.6  18.8  11.1  14.3  17.0  12.5" />
     </LinearLayout>
 </LinearLayout>

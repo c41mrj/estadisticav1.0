@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ABF60606"
-            android:text="Es preferible utilizar esta opción si se desea calcular un intervalo de confianza para la media de una población normal o aproximadamente normal si se desconoce la desviación estándar poblacional." />
+            android:text="Es preferible utilizar esta opción si se desea calcular un intervalo de confianza para la varianza o desviación estándar de una población normal o aproximadamente normal." />
 
         <TextView
             android:id="@+id/textView44"
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Un antropólogo midió el ancho (en centímetros) de una muestra aleatoria de nueve cráneos de los miembros de cierta tribú, cuyos resultados fueron:" />
+            android:text="Un fabricante de máquinas despachadoras de refrescos  asegura que sus productos sirven en promedio 240 ml de refresco en 99.9% de los casos. Un comprador decide verificar una de las máquinas, para esto toma una muestra aleatoria de 20 refrescos, de lo que obtiene las siguientes medidas:" />
 
         <TextView
             android:id="@+id/textView18"
@@ -41,13 +41,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="#29F122"
-            android:text="13.3  14.2  13.5  16.7  11.1  13.1  13.0  12.2  13.0" />
+            android:text="243  250  240  248  245  250  238  246  252  247  246  240  250  249 248  240  245  247  238  248" />
 
         <TextView
             android:id="@+id/textView51"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Estime un intervalo de confianza de 95% para la varianza poblacional de dicha tribu." />
+            android:text="Si se supone normalidad en los datos y una confianza de 99.9%, determine si es válida la afirmación del fabricante" />
     </LinearLayout>
 </LinearLayout>
