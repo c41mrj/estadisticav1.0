@@ -44,15 +44,15 @@ public class ICRAZONENTREVARIANZAS  {
         valTablas = tablas.tablaFisher(v1,v2,(this.nivelConfianza));
         valTablas2 = tablas.tablaFisher(v2,v1,(this.nivelConfianza));
         limInf = (varianza1/varianza2)*(1/valTablas);
-        limInf = tablas.redondeoDecimales(limInf,6);
+        limInf = tablas.redondeoDecimales(limInf,5);
         limSup = (varianza1/varianza2)*(valTablas2);
-        limSup = tablas.redondeoDecimales(limSup,6);
+        limSup = tablas.redondeoDecimales(limSup,5);
         if((limInf>=0 && limInf<=1)&&(limSup>=0 && limSup<=1)){
-            this.conclusion = "Cómo podemos observar, tanto el límite inferior, como el límite superior están entre 0 y 1, esto significa que al "+nivelConfianza+" de confianza se puede suponer que la varianza 1 es menor que la varianza 2.\n\nPor lo tanto suponemos que las varianzas son diferentes";
+            this.conclusion = "Cómo podemos observar, tanto el límite inferior, como el límite superior están entre 0 y 1, esto significa que al "+nivelConfianza+" de confianza se puede suponer que la varianza 1 es MENOR que la varianza 2.\n\nPor lo tanto suponemos que las varianzas son diferentes";
         }else if((limInf>1)&&(limSup>1)){
-            this.conclusion = "Cómo podemos observar, tanto el límite inferior, como el límite superior son mayores que 1, esto significa que al "+nivelConfianza+" de confianza se puede suponer que la varianza 1 es mayor que la varianza 2.\n\nPor lo tanto suponemos que las varianzas son diferentes";
+            this.conclusion = "Cómo podemos observar, tanto el límite inferior, como el límite superior son mayores que 1, esto significa que al "+nivelConfianza+" de confianza se puede suponer que la varianza 1 es MENOR que la varianza 2.\n\nPor lo tanto suponemos que las varianzas son diferentes";
         }else if(((limInf>=0)&&(limInf<=1))&&limSup>1){
-            this.conclusion = "Cómo podemos observar, el límite inferior está entre 0 y 1, y el límite superior es mayor que 1, esto significa que al "+nivelConfianza+" de confianza se puede suponer que la varianza 1 es igual que la varianza 2.\n\nPor lo tanto suponemos que las varianzas son iguales";
+            this.conclusion = "Cómo podemos observar, el límite inferior está entre 0 y 1, y el límite superior es mayor que 1, esto significa que al "+nivelConfianza+" de confianza se puede suponer que la varianza 1 es IGUAL que la varianza 2.\n\nPor lo tanto suponemos que las varianzas son iguales";
         }
     }
 

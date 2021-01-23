@@ -103,7 +103,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@drawable/ovalo"
-                            android:onClick="botonAyuda1"
                             app:srcCompat="@android:drawable/ic_menu_help" />
 
                     </LinearLayout>
@@ -150,7 +149,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@drawable/ovalo"
-                            android:onClick="botonAyuda2"
                             app:srcCompat="@android:drawable/ic_menu_help" />
 
                     </LinearLayout>
@@ -197,7 +195,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@drawable/ovalo"
-                            android:onClick="botonAyuda3"
                             app:srcCompat="@android:drawable/ic_menu_help" />
 
                     </LinearLayout>
@@ -210,7 +207,6 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_margin="12dp"
-                    android:onClick="botonTLC4"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp">
 
@@ -234,7 +230,6 @@
                             android:layout_below="@+id/rg"
                             android:layout_gravity="center"
                             android:layout_marginTop="12dp"
-                            android:onClick="botonTLC4"
                             android:text="T.Central del Límite para proporciones"
                             android:textColor="#0f5c5c"
                             android:textSize="12.4sp" />
@@ -245,7 +240,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@drawable/ovalo"
-                            android:onClick="botonAyuda4"
                             app:srcCompat="@android:drawable/ic_menu_help" />
 
                     </LinearLayout>
@@ -258,7 +252,6 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_margin="12dp"
-                    android:onClick="botonTLC5"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp">
 
@@ -282,7 +275,6 @@
                             android:layout_below="@+id/rg"
                             android:layout_gravity="center"
                             android:layout_marginTop="12dp"
-                            android:onClick="botonTLC5"
                             android:text="T.Central del Límite para diferencia de proporciones"
                             android:textColor="#0f5c5c"
                             android:textSize="12.4sp" />
@@ -293,7 +285,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@drawable/ovalo"
-                            android:onClick="botonAyuda5"
                             app:srcCompat="@android:drawable/ic_menu_help" />
 
                     </LinearLayout>

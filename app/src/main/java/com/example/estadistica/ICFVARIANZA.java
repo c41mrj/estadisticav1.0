@@ -1,6 +1,8 @@
 package com.example.estadistica;
 
-public class ICFVARIANZA extends frameworkICF1 {
+import java.text.NumberFormat;
+
+public class ICFVARIANZA extends frameworkICF1 implements conversiones{
 
     private double confianza1 = 0;
     private int gradosLibertad;
@@ -16,7 +18,7 @@ public class ICFVARIANZA extends frameworkICF1 {
     public ICFVARIANZA(double varianzaPob,int tamMuestra,double gradosConfianza){
         this.confianza = tablas.redondeoDecimales(((1-gradosConfianza)/2),4);
         this.confianza1 = 1-confianza;
-        this.multiplicador = tamMuestra -1;
+        this.multiplicador = (double)(tamMuestra -1);
         this.gradosLibertad = tamMuestra -1;
         this.desviacionEstandar = varianzaPob;
     }
@@ -35,16 +37,18 @@ public class ICFVARIANZA extends frameworkICF1 {
     }
 
     @Override
-    public double calcLimInf() {
+    public double calcLimInf() throws NumberFormatException{
         valorTablas = tablas.tablaChi(confianza,gradosLibertad);
         limInf = (multiplicador*desviacionEstandar)/valorTablas;
+        limInf = redondeoDecimales(limInf,4);
         return limInf;
     }
 
     @Override
-    public double calcLimSup() {
+    public double calcLimSup() throws NumberFormatException{
         valTablas1 = tablas.tablaChi(confianza1,gradosLibertad);
         limSup = (multiplicador*desviacionEstandar)/valTablas1;
+        limSup = redondeoDecimales(limSup,4);
         return limSup;
     }
 
@@ -65,10 +69,10 @@ public class ICFVARIANZA extends frameworkICF1 {
         valorTablas = tablas.tablaChiPotenciaPrueba(aux,this.gradosLibertad);
         if(limite == 'a'){
              gradoConfianza = 1-(2*valorTablas);
-             gradoConfianza = tablas.redondeoDecimales(gradoConfianza,7);
+             gradoConfianza = tablas.redondeoDecimales(gradoConfianza,5);
         }else if(limite == 'b'){
             gradoConfianza = (2*valorTablas)-1;
-            gradoConfianza = tablas.redondeoDecimales(gradoConfianza,7);
+            gradoConfianza = tablas.redondeoDecimales(gradoConfianza,5);
         }
         return gradoConfianza;
     }

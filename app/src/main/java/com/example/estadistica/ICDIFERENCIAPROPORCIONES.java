@@ -1,10 +1,12 @@
 package com.example.estadistica;
 
+import android.renderscript.Script;
+
 public class ICDIFERENCIAPROPORCIONES extends CalculoTablas {
 
-    private double p1,p2,significancia,limInf,limSup,diferenciaProporciones,valTablas,multiplicador,q1,q2,errorMuestral,determinante,coeficienteConfianza;
+    public double q1,q2,limInf,limSup;
     private int n1,n2,tamMinimoMuestra,cotaInferior;
-
+    private double p1,p2,significancia,diferenciaProporciones,valTablas,multiplicador,errorMuestral,determinante,coeficienteConfianza;
 
     public double getDiferenciaProporciones() {
         return diferenciaProporciones;
@@ -85,14 +87,15 @@ public class ICDIFERENCIAPROPORCIONES extends CalculoTablas {
         valTablas = tablazetaAcumulada(this.determinante);
     }
 
-
     public double calcLimInf(){
         limInf = diferenciaProporciones - (valTablas*multiplicador);
+        limInf = redondeoDecimales(limInf,4);
         return limInf;
     }
 
     public double calcLimSup(){
         limSup = diferenciaProporciones + (valTablas*multiplicador);
+        limSup = redondeoDecimales(limSup,4);
         return limSup;
     }
 
@@ -107,11 +110,21 @@ public class ICDIFERENCIAPROPORCIONES extends CalculoTablas {
     }
 
 
-    public double calcularCoeficienteDeConfianza(char lim){
+    public double calcularCoeficienteDeConfianza(char lim,double valLimite){
         if(lim == 'a'){
+            double medio = redondeoDecimales((p1-p2),4);
+            if(valLimite>medio){
+                this.limSup = valLimite;
+                this.limInf = medio - (limSup - medio);
+            }else if(valLimite<medio){
+                this.limInf = valLimite;
+                this.limSup = medio + (medio - limInf);
+            }
             coeficienteConfianza = 1-(2*valTablas);
+            coeficienteConfianza = redondeoDecimales(coeficienteConfianza,4);
         }else if(lim == 'b'){
             coeficienteConfianza = (2*valTablas) -1;
+            coeficienteConfianza = redondeoDecimales(coeficienteConfianza,4);
         }
         return coeficienteConfianza;
     }

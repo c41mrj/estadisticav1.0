@@ -1,6 +1,6 @@
 package com.example.estadistica;
 
-public class ICFMEDIADESEDESCONOCIDA extends frameworkICF1 {
+public class ICFMEDIADESEDESCONOCIDA extends frameworkICF1{
 
     private int gradosLibertad;
     private double determinante;
@@ -20,14 +20,6 @@ public class ICFMEDIADESEDESCONOCIDA extends frameworkICF1 {
         this.gradosLibertad = tamMuestra -1;
     }
 
-    public ICFMEDIADESEDESCONOCIDA(double desviacionEstandar, double Confianza, float errorMuestral){  //constructor para calcular tamaño mínimo de la muestra
-        this.desviacionEstandar = desviacionEstandar;
-        this.confianza = (1-Confianza)/2;
-        this.confianza = tablas.redondeoDecimales(this.confianza,5);
-        this.errorMuestral = errorMuestral;
-        this.valorTablas = tablas.tablaz(confianza);
-        this.multiplicador = Math.pow((this.valorTablas/this.errorMuestral),2);
-    }
 
     public ICFMEDIADESEDESCONOCIDA(double mediaMuestral, int tamMuestra, double desviacionEstandar){  //constructor para calcular el nivel de confianza
         this.mediaMuestral = mediaMuestral;
@@ -41,6 +33,7 @@ public class ICFMEDIADESEDESCONOCIDA extends frameworkICF1 {
     public double calcLimInf() {
         this.valorTablas = tablas.tablaTeStudent(this.gradosLibertad,(float)confianza);
         this.limInf = mediaMuestral-(valorTablas*multiplicador);
+        this.limInf = tablas.redondeoDecimales(this.limInf,5);
         return limInf;
     }
 
@@ -48,6 +41,7 @@ public class ICFMEDIADESEDESCONOCIDA extends frameworkICF1 {
     public double calcLimSup() {
         this.valorTablas = tablas.tablaTeStudent(this.gradosLibertad,(float)confianza);
         this.limSup = mediaMuestral + (valorTablas * multiplicador);
+        this.limSup = tablas.redondeoDecimales(this.limSup,5);
         return limSup;
     }
 
@@ -58,8 +52,14 @@ public class ICFMEDIADESEDESCONOCIDA extends frameworkICF1 {
         determinante = aux;
         valorTablas = tablas.tablaTstudentPotenciaPrueba(aux,this.gradosLibertad);
         if(aux>0) valorTablas = 1- valorTablas;
-        if(limite == 'a') return (2*valorTablas)-1;
-        else if (limite == 'b') return 1-(2*valorTablas);
+        if(limite == 'a'){
+            limSup = (2*mediaMuestral) - valLimite;
+            return (2*valorTablas)-1;
+        }
+        else if (limite == 'b') {
+            limInf = (2*mediaMuestral) - valLimite;
+            return 1-(2*valorTablas);
+        }
         else return 0;
 
     }

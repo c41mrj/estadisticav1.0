@@ -13,7 +13,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
     }
-
+/*
     public void botonDesplegarPruebasDeHipotesisVarConocida(View view){
         Intent intent = new Intent(this,INTERFAZPRUEBASDEHIPOTESISVARIANZACONOCIDA.class);  //ir a pruebas de hipotesis desviacion estandar poblacional conocida
         startActivity(intent);
@@ -34,5 +34,5 @@ public class MenuActivity extends AppCompatActivity {
         Intent intento = new Intent(this,INTERFAZPRUEBASHIPDIFERENCIAMEDIASVARIANZASCONOCIDAS.class);
         startActivity(intento);
     }
-
+*/
 }

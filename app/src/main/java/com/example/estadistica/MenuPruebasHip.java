@@ -2,13 +2,14 @@ package com.example.estadistica;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.estadistica.databinding.ActivityMenuPruebasHipBinding;
 
-public class MenuPruebasHip extends AppCompatActivity {
+public class MenuPruebasHip extends AppCompatActivity implements OpcionContrasteHipotesis{
 
     ActivityMenuPruebasHipBinding lienzo;
 
@@ -19,10 +20,10 @@ public class MenuPruebasHip extends AppCompatActivity {
         View vista = lienzo.getRoot();
         setContentView(vista);
 
-        lienzo.tcl.setOnClickListener(new View.OnClickListener() {
+        lienzo.imageView16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // Intent intent = new Intent(getApplicationContext(),);
+                desplegarContrasteHipotesisMediaVarConocidaODesconocida(true,MenuPruebasHip.this);
             }
         });
 

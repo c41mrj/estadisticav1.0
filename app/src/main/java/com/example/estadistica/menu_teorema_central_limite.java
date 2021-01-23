@@ -15,20 +15,26 @@ public class menu_teorema_central_limite extends AppCompatActivity {
     }
 
     public void botonTLC1(View vista){
-        Intent intent = new Intent(this,TCLMEDIAIU.class);
+        Intent intent = new Intent(this,CTM.class);
         startActivity(intent);
     }
 
     public void botonTLC2(View vista){
-        Intent intento = new Intent(this,TLCPROPORCIONESIU.class);
+        Intent intento = new Intent(this,CTMSumatorias.class);
         startActivity(intento);
     }
 
     public void botonTLC3(View vista){
-        Intent intent = new Intent(this,TCLIMITEDIFERENCIAMEDIASIU.class);
+        Intent intent = new Intent(this,CTMDifMedias.class);
         startActivity(intent);
     }
 
+    public void botonTLC4(View vista){
+        Intent intent = new Intent(this,CTMProporciones.class);
+        startActivity(intent);
+    }
+
+/*
     public void botonTLC4(View vista){
         Intent intent = new Intent(this,TCLIMITESUMAIU.class);
         startActivity(intent);
@@ -38,7 +44,7 @@ public class menu_teorema_central_limite extends AppCompatActivity {
         Intent intento = new Intent(this,TCLIMITEDIFERENCIAPROPORCIONES.class);
         startActivity(intento);
     }
-
+*/
 
 
 }

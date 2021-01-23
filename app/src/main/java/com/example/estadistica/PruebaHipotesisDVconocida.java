@@ -13,6 +13,10 @@ public class PruebaHipotesisDVconocida  {
     public double estadisticoZeta;
     public double valTablas1,valtTablas2;
     public double estadisticoZeta1,estadisticoZeta2;
+
+
+
+
     public PruebaHipotesisDVconocida(){
         this.operador = 0.0;
         tab = new CalculoTablas();

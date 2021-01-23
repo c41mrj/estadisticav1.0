@@ -13,8 +13,8 @@ public class TEOREMACENTRALLIMITEDIFERENCIAPROPORCIONES extends TEOREMACENTRALLI
         return valTablas;
     }
 
-    public TEOREMACENTRALLIMITEDIFERENCIAPROPORCIONES(double proporcion,double proporcion2,double prob1,double prob2, int n1, int n2){
-        this.z = calcularEstadisticoZDiferenciaProporciones(proporcion,proporcion2,prob1,prob2,n1,n2);
+    public TEOREMACENTRALLIMITEDIFERENCIAPROPORCIONES(double diferenciaProporciones,double prob1,double prob2, int n1, int n2){
+        this.z = calcularEstadisticoZDiferenciaProporciones(diferenciaProporciones,prob1,prob2,n1,n2);
         valTablas = calcularProbabilidad(z);
     }
 

@@ -18,118 +18,28 @@ public class MenuTCL extends AppCompatActivity {
     }
 
     public void botonTLC1(View vista){
-        Intent intent = new Intent(this,TCLMEDIAIU.class);
+        Intent intent = new Intent(this,CTM.class);
         startActivity(intent);
     }
 
     public void botonTLC2(View vista){
-        Intent intento = new Intent(this,TLCPROPORCIONESIU.class);
+        Intent intento = new Intent(this,CTMSumatorias.class);
         startActivity(intento);
     }
 
     public void botonTLC3(View vista){
-        Intent intent = new Intent(this,TCLIMITEDIFERENCIAMEDIASIU.class);
+        Intent intent = new Intent(this,CTMDifMedias.class);
         startActivity(intent);
     }
 
     public void botonTLC4(View vista){
-        Intent intent = new Intent(this,TCLIMITESUMAIU.class);
+        Intent intent = new Intent(this,CTMProporciones.class);
         startActivity(intent);
     }
 
     public void botonTLC5(View vista){
-        Intent intento = new Intent(this,TCLIMITEDIFERENCIAPROPORCIONES.class);
-        startActivity(intento);
+        Intent intent = new Intent(this,CTMDifProporciones.class);
+        startActivity(intent);
     }
-
-    public void botonAyuda1(View vista){
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuTCL.this);
-        alertDialog.setMessage("")
-                .setCancelable(false)
-                .setPositiveButton("Entendido!", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
-        AlertDialog botonAyuda1 = alertDialog.create();
-        botonAyuda1.setTitle("¿Debo elegir esta opción?");
-        LayoutInflater imagenAlert = LayoutInflater.from(MenuTCL.this);
-        final View view = imagenAlert.inflate(R.layout.ejemplotclmedia,null);
-        botonAyuda1.setView(view);
-        botonAyuda1.show();
-    }
-
-    public void botonAyuda2(View vista){
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuTCL.this);
-        alertDialog.setMessage("")
-                .setCancelable(false)
-                .setPositiveButton("Entendido!", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
-        AlertDialog botonAyuda1 = alertDialog.create();
-        botonAyuda1.setTitle("¿Debo elegir esta opción?");
-        LayoutInflater imagenAlert = LayoutInflater.from(MenuTCL.this);
-        final View view = imagenAlert.inflate(R.layout.ejemplotclsumatorias,null);
-        botonAyuda1.setView(view);
-        botonAyuda1.show();
-    }
-
-    public void botonAyuda3(View vista){
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuTCL.this);
-        alertDialog.setMessage("")
-                .setCancelable(false)
-                .setPositiveButton("Entendido!", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
-        AlertDialog botonAyuda1 = alertDialog.create();
-        botonAyuda1.setTitle("¿Debo elegir esta opción?");
-        LayoutInflater imagenAlert = LayoutInflater.from(MenuTCL.this);
-        final View view = imagenAlert.inflate(R.layout.ejemplotcldiferenciamedias,null);
-        botonAyuda1.setView(view);
-        botonAyuda1.show();
-    }
-     public void botonAyuda4(View vista){
-         AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuTCL.this);
-         alertDialog.setMessage("")
-                 .setCancelable(false)
-                 .setPositiveButton("Entendido!", new DialogInterface.OnClickListener() {
-                     @Override
-                     public void onClick(DialogInterface dialogInterface, int i) {
-                         dialogInterface.cancel();
-                     }
-                 });
-         AlertDialog botonAyuda1 = alertDialog.create();
-         botonAyuda1.setTitle("¿Debo elegir esta opción?");
-         LayoutInflater imagenAlert = LayoutInflater.from(MenuTCL.this);
-         final View view = imagenAlert.inflate(R.layout.ejemplotclproporciones,null);
-         botonAyuda1.setView(view);
-         botonAyuda1.show();
-     }
-
-     public void botonAyuda5(View vista){
-         AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuTCL.this);
-         alertDialog.setMessage("")
-                 .setCancelable(false)
-                 .setPositiveButton("Entendido!", new DialogInterface.OnClickListener() {
-                     @Override
-                     public void onClick(DialogInterface dialogInterface, int i) {
-                         dialogInterface.cancel();
-                     }
-                 });
-         AlertDialog botonAyuda1 = alertDialog.create();
-         botonAyuda1.setTitle("¿Debo elegir esta opción?");
-         LayoutInflater imagenAlert = LayoutInflater.from(MenuTCL.this);
-         final View view = imagenAlert.inflate(R.layout.ejemplotcldiferenciaproporciones,null);
-         botonAyuda1.setView(view);
-         botonAyuda1.show();
-     }
-
 
 }

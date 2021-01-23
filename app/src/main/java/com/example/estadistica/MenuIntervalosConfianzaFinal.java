@@ -27,252 +27,79 @@ public class MenuIntervalosConfianzaFinal extends AppCompatActivity {
         lienzo.tv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                botonDesplegarIntervalos1();
+                Intent intent = new Intent(MenuIntervalosConfianzaFinal.this,VistaIntervalosConfianza.class);
+                startActivity(intent);
             }
         });
-
-        lienzo.imageButton33.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuIntervalosConfianzaFinal.this);
-                alertDialog.setMessage("")
-                        .setCancelable(false)
-                        .setPositiveButton("Entendido!", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.cancel();
-                            }
-                        });
-                AlertDialog botonAyuda1 = alertDialog.create();
-                botonAyuda1.setTitle("¿Debo elegir esta opción?");
-                LayoutInflater imagenAlert = LayoutInflater.from(MenuIntervalosConfianzaFinal.this);
-                final View vista = imagenAlert.inflate(R.layout.ejemplosintervalosconfianzamedia,null);
-                botonAyuda1.setView(vista);
-                botonAyuda1.show();
-            }
-        });
-
 
         lienzo.tv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                botonDesplegarIntervalos2();
-            }
-        });
-
-        lienzo.imageButton34.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuIntervalosConfianzaFinal.this);
-                alertDialog.setMessage("")
-                        .setCancelable(false)
-                        .setPositiveButton("Entendido!", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.cancel();
-                            }
-                        });
-                AlertDialog botonAyuda1 = alertDialog.create();
-                botonAyuda1.setTitle("¿Debo elegir esta opción?");
-                LayoutInflater imagenAlert = LayoutInflater.from(MenuIntervalosConfianzaFinal.this);
-                final View vista = imagenAlert.inflate(R.layout.ejemplointervalosconfianzamediavarconocida,null); //aunque la vista referenciada dice que es varianza conocida es para varianza no conocida.
-                botonAyuda1.setView(vista);
-                botonAyuda1.show();
+                Intent intent = new Intent(MenuIntervalosConfianzaFinal.this,VistaIntervalosConfianzaMediaDesEstandarDesconocida.class);
+                startActivity(intent);
             }
         });
 
         lienzo.tv3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                botonDesplegarIntervalos6();
-            }
-        });
-
-        lienzo.imageButton35.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuIntervalosConfianzaFinal.this);
-                alertDialog.setMessage("")
-                        .setCancelable(false)
-                        .setPositiveButton("Entendido!", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.cancel();
-                            }
-                        });
-                AlertDialog botonAyuda1 = alertDialog.create();
-                botonAyuda1.setTitle("¿Debo elegir esta opción?");
-                LayoutInflater imagenAlert = LayoutInflater.from(MenuIntervalosConfianzaFinal.this);
-                final View vista = imagenAlert.inflate(R.layout.ejemplointervalodeconfianzaparalavarianza,null); //aunque la vista referenciada dice que es varianza conocida es para varianza no conocida.
-                botonAyuda1.setView(vista);
-                botonAyuda1.show();
+                Intent intent = new Intent(MenuIntervalosConfianzaFinal.this,VistaIntervalosConfianzaVarianza.class);
+                startActivity(intent);
             }
         });
 
         lienzo.tv4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                botonDesplegarIntervalos3();
-            }
-        });
-
-        lienzo.imageButton36.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuIntervalosConfianzaFinal.this);
-                alertDialog.setMessage("")
-                        .setCancelable(false)
-                        .setPositiveButton("Entendido!", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.cancel();
-                            }
-                        });
-                AlertDialog botonAyuda1 = alertDialog.create();
-                botonAyuda1.setTitle("¿Debo elegir esta opción?");
-                LayoutInflater imagenAlert = LayoutInflater.from(MenuIntervalosConfianzaFinal.this);
-                final View vista = imagenAlert.inflate(R.layout.ejemplointervalosdeconfianzaparaladiferenciademediasdesviacionesconocidas,null); //aunque la vista referenciada dice que es varianza conocida es para varianza no conocida.
-                botonAyuda1.setView(vista);
-                botonAyuda1.show();
+                Intent intent = new Intent(MenuIntervalosConfianzaFinal.this,VistaIntervalosConfianzaDifMediasDesviacionesConocidas.class);
+                startActivity(intent);
             }
         });
 
         lienzo.tv5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                botonDesplegarIntervalos5();
+                Intent intent = new Intent(MenuIntervalosConfianzaFinal.this,VistaIntervalosConfianzaDifMediasDesviacionesDesconocidasPeroIguales.class);
+                startActivity(intent);
             }
         });
-
-        lienzo.imageButton37.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuIntervalosConfianzaFinal.this);
-                alertDialog.setMessage("")
-                        .setCancelable(false)
-                        .setPositiveButton("Entendido!", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.cancel();
-                            }
-                        });
-                AlertDialog botonAyuda1 = alertDialog.create();
-                botonAyuda1.setTitle("¿Debo elegir esta opción?");
-                LayoutInflater imagenAlert = LayoutInflater.from(MenuIntervalosConfianzaFinal.this);
-                final View vista = imagenAlert.inflate(R.layout.ejemplointervaloconfianzadiferenciademediasdesviacionesiguales,null); //aunque la vista referenciada dice que es varianza conocida es para varianza no conocida.
-                botonAyuda1.setView(vista);
-                botonAyuda1.show();
-            }
-        });
-
 
         lienzo.tv6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                botonDesplegarIntervalos4();
-            }
-        });
-
-        lienzo.imageButton38.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuIntervalosConfianzaFinal.this);
-                alertDialog.setMessage("")
-                        .setCancelable(false)
-                        .setPositiveButton("Entendido!", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.cancel();
-                            }
-                        });
-                AlertDialog botonAyuda1 = alertDialog.create();
-                botonAyuda1.setTitle("¿Debo elegir esta opción?");
-                LayoutInflater imagenAlert = LayoutInflater.from(MenuIntervalosConfianzaFinal.this);
-                final View vista = imagenAlert.inflate(R.layout.ejemplointervalosdeconfianzadiferenciademediasdesvdiferentes,null); //aunque la vista referenciada dice que es varianza conocida es para varianza no conocida.
-                botonAyuda1.setView(vista);
-                botonAyuda1.show();
+                Intent intent = new Intent(MenuIntervalosConfianzaFinal.this,VistaIntervalosConfianzaDiferenciaMediasVarDesconocidasPeroDiferentes.class);
+                startActivity(intent);
             }
         });
 
         lienzo.tv7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                botonDesplegarIntervalos7();
+                Intent intent = new Intent(MenuIntervalosConfianzaFinal.this,VistaIntervalosConfianzaRazonEntreVarianzas.class);
+                startActivity(intent);
             }
         });
 
         lienzo.tv8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                botonDesplegarIntervalos8();
+                Intent intent = new Intent(MenuIntervalosConfianzaFinal.this,VistaIntervalosConfianzaProporciones.class);
+                startActivity(intent);
             }
         });
+
 
         lienzo.tv9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                botonDesplegarIntervalos9();
-            }
-        });
-
-        lienzo.button28.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                botonQueHago();
+                Intent intent = new Intent(MenuIntervalosConfianzaFinal.this,VistaIntervalosConfianzaDiferenciaProporciones.class);
+                startActivity(intent);
             }
         });
 
     }
-
-    public void botonDesplegarIntervalos1(){
-        Intent intento = new Intent(getApplicationContext(),INTERVALOCONFIANZA1IU.class);
-        startActivity(intento);
-    }
-
-    public void botonDesplegarIntervalos2(){
-        Intent intento = new Intent(getApplicationContext(),INTERVALOSCONFIANZAIU2.class);
-        startActivity(intento);
-    }
-
-    public void botonDesplegarIntervalos3(){
-        Intent intento = new Intent(getApplicationContext(),INTERFAZICDIFERENCIAMEDIASVARIANZASCONOCIDAS.class);
-        startActivity(intento);
-    }
-
-
-    public void botonDesplegarIntervalos4(){
-        Intent intent = new Intent(getApplicationContext(),INTERFAZICDIFMEDIAS3.class);
-        startActivity(intent);
-    }
-
-    public void botonDesplegarIntervalos5(){
-        Intent intent = new Intent(getApplicationContext(),INTERFAZICDIFMEDIAS2.class);
-        startActivity(intent);
-    }
-
-    public void botonDesplegarIntervalos6(){
-        Intent intnt = new Intent(getApplicationContext(),INTERFAZICVARIANZA.class);
-        startActivity(intnt);
-    }
-
-    public void botonDesplegarIntervalos7(){
-        Intent intento = new Intent(getApplicationContext(),INTERFAZICRAZONENTREVARIANZAS.class);
-        startActivity(intento);
-    }
-
-    public void botonDesplegarIntervalos8(){
-        Intent intento = new Intent(getApplicationContext(),INTERFAZICPROPORCIONES.class);
-        startActivity(intento);
-    }
-
-    public void botonDesplegarIntervalos9(){
-        Intent intent = new Intent(getApplicationContext(),INTERFAZICDIFERENCIAPROPORCIONES.class);
-        startActivity(intent);
-    }
-
     public void botonQueHago(){
         Toast anuncio = Toast.makeText(getApplicationContext(),"Elige la calculadora para la razón entre varianzas y sigue las instrucciones",Toast.LENGTH_LONG);
         anuncio.show();
     }
-
 }

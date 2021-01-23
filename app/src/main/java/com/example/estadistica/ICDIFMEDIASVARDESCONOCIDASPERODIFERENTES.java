@@ -1,6 +1,6 @@
 package com.example.estadistica;
 
-public class ICDIFMEDIASVARDESCONOCIDASPERODIFERENTES extends frameworkIC2 {
+public class ICDIFMEDIASVARDESCONOCIDASPERODIFERENTES extends frameworkIC2 implements conversiones{
 
     private double determinante;
 
@@ -14,7 +14,9 @@ public class ICDIFMEDIASVARDESCONOCIDASPERODIFERENTES extends frameworkIC2 {
         valTablas = tabla.tablaTeStudent(gradosLibertad,(float)tabla.redondeoDecimales(((1-significancia)/2),5));
         this.multiplicador = Math.sqrt(((this.varianzaPob1/tamMuestra1)+(this.varianzaPob2/tamMuestra2)));
         this.limInf = diferenciaDeMedias - (valTablas * this.multiplicador);
+        this.limInf = redondeoDecimales(this.limInf,5);
         this.limSup = diferenciaDeMedias + (valTablas*this.multiplicador);
+        this.limSup = redondeoDecimales(this.limSup,5);
     }
 
     public ICDIFMEDIASVARDESCONOCIDASPERODIFERENTES(int tamMuestra1, int tamMuestra2, double varianzaPob1, double varianzaPob2, double diferenciaDeMedias, double limite,char interval) {
@@ -31,8 +33,10 @@ public class ICDIFMEDIASVARDESCONOCIDASPERODIFERENTES extends frameworkIC2 {
         }
         if(interval == 'a'){
             coeficienteConfianza = (2*valTablas)-1;
+            coeficienteConfianza = redondeoDecimales(coeficienteConfianza,5);
         }else if(interval == 'b'){
             coeficienteConfianza = 1-(2*valTablas);
+            coeficienteConfianza = redondeoDecimales(coeficienteConfianza,5);
         }
     }
 }

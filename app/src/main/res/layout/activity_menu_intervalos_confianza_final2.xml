@@ -62,7 +62,8 @@
 
                 <GridLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:alignmentMode="alignMargins"
                     android:columnCount="2"
                     android:columnOrderPreserved="false"
@@ -86,29 +87,30 @@
                             android:orientation="vertical"
                             android:padding="16dp">
 
+                            <TextView
+                                android:layout_width="121dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="true"
+                                android:text="Intervalos de Confianza para la media si se conoce la desviación estándar poblacional (σ)"
+                                android:textAlignment="center"
+                                android:textColor="#0f5c5c"
+                                android:textSize="12.4sp" />
+
                             <ImageView
-                                android:id="@+id/imageView16"
+                                android:id="@+id/tv1"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_gravity="center"
-                                android:src="@drawable/logo" />
-
-                            <TextView
-                                android:id="@+id/tv1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="12dp"
-                                android:clickable="true"
-                                android:text="Intervalos de Confianza para la media si se conoce la desviación estándar poblacional (σ)"
-                                android:textColor="#0f5c5c"
-                                android:textSize="12.4sp" />
+                                android:layout_marginTop="10dp"
+                                app:srcCompat="@drawable/seleccione" />
 
                             <ImageButton
                                 android:id="@+id/imageButton33"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
                                 android:background="@drawable/ovalo"
                                 android:src="@android:drawable/ic_menu_help" />
 
@@ -127,32 +129,34 @@
 
                         <LinearLayout
                             android:layout_width="150dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:orientation="vertical"
                             android:padding="16dp">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/logo" />
-
                             <TextView
-                                android:id="@+id/tv2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:layout_marginTop="12dp"
                                 android:text="Intervalos de confianza para la media si se desconoce la desviación estándar poblacional (σ)"
+                                android:textAlignment="center"
                                 android:textColor="#0f5c5c"
                                 android:textSize="12.4sp" />
+
+                            <ImageView
+                                android:id="@+id/tv2"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                app:srcCompat="@drawable/seleccione" />
 
                             <ImageButton
                                 android:id="@+id/imageButton34"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
                                 android:background="@drawable/ovalo"
                                 android:src="@android:drawable/ic_menu_help" />
 
@@ -176,21 +180,23 @@
                             android:orientation="vertical"
                             android:padding="16dp">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/logo" />
-
                             <TextView
-                                android:id="@+id/tv3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:layout_marginTop="12dp"
+                                android:layout_marginBottom="10dp"
                                 android:text="Intervalos de confianza para la varianza de una población normal"
+                                android:textAlignment="center"
                                 android:textColor="#0f5c5c"
                                 android:textSize="12.4sp" />
+
+                            <ImageView
+                                android:id="@+id/tv3"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/seleccione" />
 
                             <ImageButton
                                 android:id="@+id/imageButton35"
@@ -220,22 +226,24 @@
                             android:orientation="vertical"
                             android:padding="16dp">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/logo" />
-
                             <TextView
-                                android:id="@+id/tv4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/rg"
                                 android:layout_gravity="center"
-                                android:layout_marginTop="12dp"
-                                android:text="Intervalos de confianza para la diferencia de medias si se conocen las varianzas poblacionales (σ1 y σ2)"
+                                android:layout_marginBottom="10dp"
+                                android:text="Intervalos de confianza para la diferencia de medias si se conocen las desviaciones estándar poblacionales (σ1 y σ2)"
+                                android:textAlignment="center"
                                 android:textColor="#0f5c5c"
                                 android:textSize="12.4sp" />
+
+                            <ImageView
+                                android:id="@+id/tv4"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/seleccione" />
 
                             <ImageButton
                                 android:id="@+id/imageButton36"
@@ -260,27 +268,30 @@
 
                         <LinearLayout
                             android:layout_width="150dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:orientation="vertical"
                             android:padding="16dp">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/logo" />
-
                             <TextView
-                                android:id="@+id/tv5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/rg"
                                 android:layout_gravity="center"
-                                android:layout_marginTop="12dp"
+                                android:layout_marginBottom="10dp"
                                 android:text="Intervalos de confianza para la diferencia de medias si se desconocen las varianzas poblacionales pero se sabe que son iguales (σ1 = σ2)"
+                                android:textAlignment="center"
                                 android:textColor="#0f5c5c"
                                 android:textSize="12.4sp" />
+
+
+                            <ImageView
+                                android:id="@+id/tv5"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/seleccione" />
 
                             <ImageButton
                                 android:id="@+id/imageButton37"
@@ -310,22 +321,26 @@
                             android:orientation="vertical"
                             android:padding="16dp">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/logo" />
 
                             <TextView
-                                android:id="@+id/tv6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/rg"
                                 android:layout_gravity="center"
-                                android:layout_marginTop="12dp"
+                                android:layout_marginBottom="10dp"
                                 android:text="Intervalos de confianza para la diferencia de medias si se desconocen las varianzas poblacionales pero se sabe que son diferentes (σ1 ≠ σ2)"
+                                android:textAlignment="center"
                                 android:textColor="#0f5c5c"
                                 android:textSize="12.4sp" />
+
+
+                            <ImageView
+                                android:id="@+id/tv6"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/seleccione" />
 
                             <ImageButton
                                 android:id="@+id/imageButton38"
@@ -355,22 +370,26 @@
                             android:orientation="vertical"
                             android:padding="16dp">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/logo" />
 
                             <TextView
-                                android:id="@+id/tv7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/rg"
                                 android:layout_gravity="center"
-                                android:layout_marginTop="12dp"
+                                android:layout_marginBottom="10dp"
                                 android:text="Intervalos de confianza para la razón entre varianzas de dos poblaciones normales"
+                                android:textAlignment="center"
                                 android:textColor="#0f5c5c"
                                 android:textSize="12.4sp" />
+
+
+                            <ImageView
+                                android:id="@+id/tv7"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/seleccione" />
 
                             <ImageButton
                                 android:id="@+id/imageButton39"
@@ -400,22 +419,24 @@
                             android:orientation="vertical"
                             android:padding="16dp">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/logo" />
-
                             <TextView
-                                android:id="@+id/tv8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/rg"
                                 android:layout_gravity="center"
-                                android:layout_marginTop="12dp"
                                 android:text="Intervalos de confianza para proporciones"
                                 android:textColor="#0f5c5c"
                                 android:textSize="12.4sp" />
+
+
+                            <ImageView
+                                android:id="@+id/tv8"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/seleccione" />
+
 
                             <ImageButton
                                 android:id="@+id/imageButton40"
@@ -445,22 +466,26 @@
                             android:orientation="vertical"
                             android:padding="16dp">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/logo" />
 
                             <TextView
-                                android:id="@+id/tv9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/rg"
                                 android:layout_gravity="center"
-                                android:layout_marginTop="12dp"
                                 android:text="Intervalos de confianza para la diferencia de proporciones"
                                 android:textColor="#0f5c5c"
                                 android:textSize="12.4sp" />
+
+                            <ImageView
+                                android:id="@+id/tv9"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/seleccione" />
+
+
 
                             <ImageButton
                                 android:id="@+id/imageButton41"

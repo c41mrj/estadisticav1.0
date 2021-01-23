@@ -25,9 +25,21 @@ public class TEOREMACENTRALLIMITEMEDIA extends TEOREMACENTRALLIMITE {
         return probabilidad;
     }
 
-    public int calcularTamañoMinimoMuestra(double varianza, double nivelConfianza, double d0){
+    public int calcularTamañoMinimoMuestraCaso1(double varianza, double nivelConfianza, double d0){
         valTablas = tablas.tablazetaAcumuladaPotencia(((1-nivelConfianza)/2));
         return (int)Math.floor(Math.pow(((varianza*valTablas)/d0),2) + 1);
+    }
+
+
+    public int calcularTamañoMinimoMuestraCaso2(double varianza, double nivelConfianza, double d0){
+        valTablas = tablas.tablazetaAcumuladaPotencia((nivelConfianza/2));
+        return (int)Math.floor(Math.pow(((varianza*valTablas)/d0),2) + 1);
+    }
+
+
+    public int calcularTamañoMinimoMuestraCaso3(double varianza, double nivelConfianza, double x0,double miu){
+        valTablas = tablas.tablazetaAcumuladaPotencia(nivelConfianza);
+        return (int)Math.floor(Math.pow(((varianza*valTablas)/(x0-miu)),2) + 1);
     }
 
     public TEOREMACENTRALLIMITEMEDIA(){

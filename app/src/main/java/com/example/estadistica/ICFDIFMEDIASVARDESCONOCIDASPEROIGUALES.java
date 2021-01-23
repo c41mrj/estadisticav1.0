@@ -1,9 +1,8 @@
 package com.example.estadistica;
 
-public class ICFDIFMEDIASVARDESCONOCIDASPEROIGUALES extends frameworkIC2 {
+public class ICFDIFMEDIASVARDESCONOCIDASPEROIGUALES extends frameworkIC2 implements conversiones{
 
     private double Sp,determinante;
-    private int gradosLibertad;
 
     public double getSp() {
         return Sp;
@@ -20,9 +19,11 @@ public class ICFDIFMEDIASVARDESCONOCIDASPEROIGUALES extends frameworkIC2 {
         this.valTablas = tabla.tablaTeStudent(gradosLibertad,(float)confianza);
         double valt = this.valTablas;
         this.multiplicador = Math.sqrt((1/(double)tamMuestra1)+(1/(double)tamMuestra2));
-        this.multiplicador = tabla.redondeoDecimales(multiplicador,6);
+        this.multiplicador = tabla.redondeoDecimales(multiplicador,5);
         limInf = diferenciaDeMedias - (valt*multiplicador*Sp);
+        limInf = redondeoDecimales(limInf,4);
         limSup = diferenciaDeMedias + (valt*multiplicador*Sp);
+        limSup = redondeoDecimales(limSup,4);
     }
 
     public ICFDIFMEDIASVARDESCONOCIDASPEROIGUALES(int tamMuestra1, int tamMuestra2, double varianzaPob1, double varianzaPob2, double diferenciaDeMedias, double limite,char lim) {
@@ -36,13 +37,17 @@ public class ICFDIFMEDIASVARDESCONOCIDASPEROIGUALES extends frameworkIC2 {
         if(aux < 0){
             aux = aux*-1;
             valTablas = tabla.tablaTstudentPotenciaPrueba(aux,gradosLibertad);
+            valTablas = redondeoDecimales(valTablas,5);
         }else{
             valTablas = 1-tabla.tablaTstudentPotenciaPrueba(aux,gradosLibertad);
+            valTablas = redondeoDecimales(valTablas,5);
         }
         if(lim == 'a'){
             coeficienteConfianza = (2*valTablas)-1;
+            coeficienteConfianza = redondeoDecimales(coeficienteConfianza,5);
         }else if (lim == 'b'){
             coeficienteConfianza = 1- (2*valTablas);
+            coeficienteConfianza = redondeoDecimales(coeficienteConfianza,5);
         }
     }
 }

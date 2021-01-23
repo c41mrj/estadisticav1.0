@@ -57,7 +57,9 @@ public class ICFPROPORCIONES {
         this.valTablas = tabla.tablazeta((float)redondeoDecimales((this.confianza/2),4));
         this.multiplicador = Math.sqrt(((probabilidad*complemento)/tamMuestra));
         this.limInf = probabilidad - (this.valTablas*this.multiplicador);
+        this.limInf = redondeoDecimales(this.limInf,4);
         this.limSup = probabilidad + (this.valTablas*this.multiplicador);
+        this.limSup = redondeoDecimales(this.limSup,4);
     }
 
     public ICFPROPORCIONES(double nivelConfianza,double errorMuestral, double probabilidad){
@@ -76,6 +78,16 @@ public class ICFPROPORCIONES {
         this.multiplicador = (valLimite  - proporcion) * Math.sqrt((tamMuestra/(proporcion*complemento)));
         this.multiplicador = redondeoDecimales(this.multiplicador,4);
         this.valTablas = tabla.tablazetaAcumulada(multiplicador);
+        if(valLimite>proporcion){
+            this.limSup = valLimite;
+            double aux = redondeoDecimales((valLimite-proporcion),4);
+            this.limInf = redondeoDecimales((valLimite - aux),4);
+        }else if(valLimite<proporcion){
+            this.limInf = valLimite;
+            double aux = redondeoDecimales((proporcion - limInf),4);
+            this.limSup = redondeoDecimales((proporcion + aux),4);
+        }
+
         if(limite == 'a'){
             coeficienteConfianza = (1 - (2*valTablas));
             coeficienteConfianza = redondeoDecimales(coeficienteConfianza,6);

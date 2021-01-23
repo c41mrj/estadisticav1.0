@@ -13,6 +13,79 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="TEOREMA CENTRAL DEL LIMITE"
+                    android:textColor="#0f5c5c"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/subtitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titulo"
+                    android:layout_marginTop="11dp"
+                    android:gravity="center"
+                    android:text="Selecciona la opción que deseas."
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="10dp">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="273dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="40dp"
+                    android:foregroundGravity="center"
+                    android:gravity="left"
+                    android:spinnerMode="dialog"></Spinner>
+
+                <ImageView
+                    android:id="@+id/botonayuda"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/spinner"
+                    android:layout_toRightOf="@+id/spinner"
+                    app:srcCompat="@drawable/signodeinterrogacion" />
+            </RelativeLayout>
+        </LinearLayout>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -20,80 +93,359 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/delete"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center|center_horizontal"
+                    app:srcCompat="@drawable/gomadeborrar" />
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginRight="20dp">
-
-                    <TextView
-                        android:id="@+id/titulo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:gravity="center_horizontal"
-                        android:text="TEOREMA CENTRAL DEL LIMITE"
-                        android:textColor="#0f5c5c"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/subtitulo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/titulo"
-                        android:layout_marginTop="11dp"
-                        android:gravity="center"
-                        android:text="Selecciona la opción que deseas."
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/menu"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:paddingTop="10dp">
-
-                    <Spinner
-                        android:id="@+id/spinner"
-                        android:layout_width="273dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="40dp"
-                        android:foregroundGravity="center"
-                        android:gravity="left"
-                        android:spinnerMode="dialog"></Spinner>
-
-                    <ImageView
-                        android:id="@+id/botonayuda"
-                        android:layout_width="47dp"
-                        android:layout_height="39dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginStart="13dp"
-                        android:layout_marginLeft="13dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_toEndOf="@+id/spinner"
-                        android:layout_toRightOf="@+id/spinner"
-                        app:srcCompat="@drawable/signodeinterrogacion" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/tres"
+                    android:id="@+id/datosDiferenciaProporciones"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:visibility="visible">
+                    android:visibility="gone">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="4">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/diferenciaproporciones" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Diferencia de proporciones"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/diferenciaProporciones"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/confiabilidad1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Confiabilidad 1"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/confiabilidad1"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/n1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Tamaño de muestra 1"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/tamMuestra1"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/confiabilidad2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Confiabilidad 2"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/confiabilidad2"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/n2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Tamaño de muestra 2"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/tamMuestra2"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </GridLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/datosProporciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
 
                     <GridLayout
                         android:layout_width="match_parent"
@@ -102,6 +454,1841 @@
                         android:columnCount="2"
                         android:columnOrderPreserved="false"
                         android:rowCount="4">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/proporcion" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Proporción"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/proporcion"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/confiabilidad"
+                                    tools:srcCompat="@drawable/confiabilidad" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Confiabilidad"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/confiabilidad"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/tmuestra" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Tamaño de muestra"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/tamMuestra"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </GridLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/datosTamMinimoMuestraDifMedias2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="4">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/mediap"
+                                    app:srcCompat="@drawable/dados" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Probabilidad"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/mediap"
+                                    app:srcCompat="@drawable/miu1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Media de la población 1"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/mediap"
+                                    app:srcCompat="@drawable/sigmacuadrada1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Varianza de la población 1"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/desviacionestandar"
+                                    app:srcCompat="@drawable/nuevadiferenciamedias" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Nueva diferencia de medias"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/promediomuestra"
+                                    app:srcCompat="@drawable/miu2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Media de la población 2"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/tmuestra"
+                                    app:srcCompat="@drawable/sigmacuadrada2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Varianza de la población 2"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </GridLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/datosTamMinimoMuestraDifMedias"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="4">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/mediap"
+                                    app:srcCompat="@drawable/dados" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Probabilidad"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/probabilidadTCLDifMedias1"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/mediap"
+                                    app:srcCompat="@drawable/miu1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Media de la población 1"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/mediaPob1TamMinimoMuestraDifMedias"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/mediap"
+                                    app:srcCompat="@drawable/sigmacuadrada1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Varianza de la población 1"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/varianza1TamMinimoMuestraDifMedias"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/desviacionestandar"
+                                    app:srcCompat="@drawable/decero" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Nueva diferencia de promedios"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/d0DifMediasTamMinimoMuestra"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/promediomuestra"
+                                    app:srcCompat="@drawable/miu2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Media de la población 2"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/mediaPob2DifMediasTamMinimoMuestra1"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/tmuestra"
+                                    app:srcCompat="@drawable/sigmacuadrada2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Varianza de la población 2"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/varianzaPob2DifMediasTamMinimoMuestra"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </GridLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/datosTCLDiferenciaMedias"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="4">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/diferenciadepromedios" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Diferencia de promedios"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/diferenciaDePromediosTCLDiferenciaMedias"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/miu1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Media de la primer poblaciónn"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/mediaPob1TCLDiferenciaMedias"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/n1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Tamaño de muestra 1"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/tamMuestra1TCLDifMedias"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/sigmacuadrada1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Varianza de la población 1"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/varianza1TCLDifMedias"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/miu2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Media de la segunda población"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/mediaPob2TCLDiferenciaMedias"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/n2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Tamaño de muestra 2"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/tamMuestra2TCLDifMedias"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/sigmacuadrada2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Varianza de la población 2"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/varianza2TCLDifMedias"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </GridLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/datosTCLSumatorias"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="4">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="34dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/t" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Total"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/totalTCLSumas"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/desviacionestandar" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Desviación estandar"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/desvEstandarTCLSumas"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/tmuestra" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Tamaño de muestra"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/tamMuestraTCLSumas"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="number" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/miu" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Media poblacional"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/mediaPoblacionalTCLSumas"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </GridLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/datosTamMinimoMuestraMedia2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="4">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/dados" />" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="Probabilidad"
+                                    android:textColor="#0f5c5c"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="13dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="166dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingRight="12dp">
+
+                                <EditText
+                                    android:id="@+id/probabilidadTamMinimoMuestra2"
+                                    android:layout_width="116dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal|center_vertical"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:ems="10"
+                                    android:inputType="numberSigned|number|numberDecimal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="100dp"
@@ -156,6 +2343,7 @@
                                 android:paddingRight="12dp">
 
                                 <EditText
+                                    android:id="@+id/mediaPoblacionalTamMinimoMuestra2"
                                     android:layout_width="116dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal|center_vertical"
@@ -188,7 +2376,7 @@
                                     android:layout_height="50dp"
                                     android:layout_gravity="center"
                                     android:src="@drawable/desviacionestandar"
-                                    app:srcCompat="@drawable/dados" />
+                                    app:srcCompat="@drawable/desviacionestandar" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -221,6 +2409,7 @@
                                 android:paddingRight="12dp">
 
                                 <EditText
+                                    android:id="@+id/desvEstandarTamMinimoMuestra2"
                                     android:layout_width="116dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal|center_vertical"
@@ -285,6 +2474,7 @@
                                 android:paddingRight="12dp">
 
                                 <EditText
+                                    android:id="@+id/nuevoPromedioTamMinimoMuestra2"
                                     android:layout_width="116dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal|center_vertical"
@@ -302,8 +2492,8 @@
                 <RelativeLayout
                     android:id="@+id/datosTamMinimoMuestraMedia1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:visibility="visible">
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
 
                     <GridLayout
                         android:layout_width="match_parent"
@@ -366,6 +2556,7 @@
                                 android:paddingRight="12dp">
 
                                 <EditText
+                                    android:id="@+id/desvEstandarTCLTamMinimoMuestra1"
                                     android:layout_width="116dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal|center_vertical"
@@ -397,8 +2588,8 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_gravity="center"
-                                    android:src="@drawable/probabilidad"
-                                    app:srcCompat="@drawable/dados" />
+                                    app:srcCompat="@drawable/dados"
+                                    tools:srcCompat="@drawable/dados" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -431,6 +2622,7 @@
                                 android:paddingRight="12dp">
 
                                 <EditText
+                                    android:id="@+id/probabilidadTCLTamMinimoMuestra"
                                     android:layout_width="116dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal|center_vertical"
@@ -438,7 +2630,7 @@
                                     android:layout_marginRight="0dp"
                                     android:layout_marginBottom="15dp"
                                     android:ems="10"
-                                    android:inputType="numberSigned|number|numberDecimal" />
+                                    android:inputType="number|numberDecimal" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
 
@@ -495,6 +2687,7 @@
                                 android:paddingRight="12dp">
 
                                 <EditText
+                                    android:id="@+id/d0TCLTamMinimoMuestra1"
                                     android:layout_width="116dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal|center_vertical"
@@ -511,12 +2704,12 @@
                 <RelativeLayout
                     android:id="@+id/datosTCLMedia"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:visibility="visible">
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
 
                     <GridLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:alignmentMode="alignMargins"
                         android:columnCount="2"
                         android:columnOrderPreserved="false"
@@ -574,6 +2767,7 @@
                                 android:paddingRight="12dp">
 
                                 <EditText
+                                    android:id="@+id/mediaPoblacionalTCLMedia"
                                     android:layout_width="116dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal|center_vertical"
@@ -637,6 +2831,7 @@
                                 android:paddingRight="12dp">
 
                                 <EditText
+                                    android:id="@+id/desvEstandarTCLMedia"
                                     android:layout_width="116dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal|center_vertical"
@@ -700,6 +2895,7 @@
                                 android:paddingRight="12dp">
 
                                 <EditText
+                                    android:id="@+id/promMuestralTCLMedia"
                                     android:layout_width="116dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal|center_vertical"
@@ -764,6 +2960,7 @@
                                 android:paddingRight="12dp">
 
                                 <EditText
+                                    android:id="@+id/tamMuestraTCLMedia"
                                     android:layout_width="116dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal|center_vertical"
@@ -780,16 +2977,9 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:id="@+id/menuv"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                </RelativeLayout>
-
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/botoncalcular"
-                    android:layout_width="80dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     app:srcCompat="@drawable/calculadora" />
@@ -801,6 +2991,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/CardViewResultado"
                         android:layout_width="match_parent"
+                        android:layout_marginTop="25dp"
                         android:layout_height="wrap_content">
 
                         <TextView
@@ -813,11 +3004,11 @@
                 </androidx.gridlayout.widget.GridLayout>
 
                 <LinearLayout
-                    android:id="@+id/layoutProcedimientoIC"
+                    android:id="@+id/layoutProcedimientoTCL"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:visibility="visible">
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/textView67"
@@ -830,12 +3021,12 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="205dp"
+                        android:layout_height="wrap_content"
                         android:background="@color/cardview_light_background">
 
                         <TableLayout
                             android:layout_width="154dp"
-                            android:layout_height="205dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_marginEnd="90dp"
@@ -854,7 +3045,7 @@
                                     app:srcCompat="@drawable/mediap" />
 
                                 <TextView
-                                    android:id="@+id/textView80"
+                                    android:id="@+id/dato1TabTCLMedia"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal"
@@ -875,7 +3066,7 @@
                                     android:src="@drawable/desviacionestandar" />
 
                                 <TextView
-                                    android:id="@+id/textView90"
+                                    android:id="@+id/dato2Tab1TCL"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal"
@@ -895,7 +3086,7 @@
                                     android:src="@drawable/nuevopromedio" />
 
                                 <TextView
-                                    android:id="@+id/textView91"
+                                    android:id="@+id/dato3TabTCL"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal"
@@ -903,6 +3094,7 @@
                             </TableRow>
 
                             <TableRow
+                                android:id="@+id/tbrow"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center">
@@ -915,7 +3107,7 @@
                                     android:src="@drawable/tmuestra" />
 
                                 <TextView
-                                    android:id="@+id/textView92"
+                                    android:id="@+id/dato4TabTCL"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal"
@@ -931,60 +3123,42 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
                         android:text="Paso 1:"
                         android:textAlignment="center" />
 
                     <TextView
-                        android:id="@+id/textView93"
-                        android:layout_width="390dp"
+                        android:id="@+id/paso1TCLMedia"
+                        android:layout_width="348dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginTop="0dp"
-                        android:text="El primer caso para calcular la probabilidad deseada es calcular el valor del estadístico de prueba Z para la media, que posteriormente buscaremos en las tablas de la distribución acumulada normal estándar. Para realizar el cálculo podemos apoyarnos del siguiente teorema:" />
+                        android:gravity="center"
+                        android:text="El primer paso para calcular la probabilidad deseada es calcular el valor del estadístico de prueba Z para la media, que posteriormente buscaremos en las tablas de la distribución acumulada normal estándar. Para realizar el cálculo podemos apoyarnos del siguiente teorema:" />
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="12dp">
+                        android:background="#FFFFFF"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:id="@+id/imageView17"
-                            android:layout_width="129dp"
-                            android:layout_height="67dp"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="21dp"
-                            android:layout_marginLeft="21dp"
-                            android:layout_marginTop="92dp"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
                             app:srcCompat="@drawable/tlc_estadisticoz" />
 
-                        <TextView
-                            android:id="@+id/textView95"
-                            android:layout_width="133dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_marginTop="13dp"
-                            android:layout_marginEnd="71dp"
-                            android:layout_marginRight="71dp"
-                            android:background="#9774FA"
-                            android:text="¿Que representa z?" />
+                    </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/textView97"
-                            android:layout_width="179dp"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/textView95"
-                            android:layout_marginStart="36dp"
-                            android:layout_marginLeft="36dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_toEndOf="@+id/imageView17"
-                            android:layout_toRightOf="@+id/imageView17"
-                            android:background="@drawable/border"
-                            android:text="El valor de z se puede interpretar cómo la diferencia entre un valor de interés cómo la diferencia entre un valor de interés(en éste caso el promedio muestral) y el promedio poblacional; esta diferencia expresada en desviaciones estándar. Para comprender mejor se sugiere tomar en cuenta el siguiente ejemplo" />
-
-                    </RelativeLayout>
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/estadisticoz_concepto"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        app:lottie_speed="999999999999"
+                        app:srcCompat="@drawable/pregunta" />
 
                     <TextView
                         android:id="@+id/textView98"
@@ -995,30 +3169,19 @@
                         android:text="Paso 2:"
                         android:textAlignment="center" />
 
-                    <RelativeLayout
+                    <TextView
+                        android:id="@+id/Paso2TCL"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:text="Despues de sustituir los valores correspondientes en el teorema presentado anteriormente obtenemos que en este caso Z=0.607. Ahora se hace necesario buscar ell valor calculado del estadístico Z en las tablas de la distribución normal estándar" />
 
-                        <TextView
-                            android:layout_width="275dp"
-                            android:layout_height="wrap_content"
-                            android:text="Despues de sustituir los valores correspondientes en el teorema presentado anteriormente obtenemos que en este caso Z=0.607. Ahora se hace necesario buscar ell valor calculado del estadístico Z en las tablas de la distribución normal estándar" />
-
-                        <ImageView
-                            android:layout_width="42dp"
-                            android:layout_height="32dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_marginStart="45dp"
-                            android:layout_marginLeft="45dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginEnd="21dp"
-                            android:layout_marginRight="21dp"
-                            android:background="@drawable/ovalo"
-                            app:srcCompat="@drawable/signodeinterrogacion" />
-
-                    </RelativeLayout>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/pregunta" />
 
                     <TextView
                         android:id="@+id/textView100"
@@ -1028,15 +3191,17 @@
                         android:background="#80D8FF"
                         android:gravity="center_horizontal"
                         android:text="Conclusión:"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        app:drawableStartCompat="@drawable/border"
+                        app:drawableTint="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/textView101"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
+                        android:background="@drawable/border"
                         android:text="El valor encontrado en las tablas de la distribución normal estándar es: 0.72808. Por lo tanto la probabilidad de que el promedio muestral sea menor o igual que 10.12 es de: 0.72808 = 72.808%"
-                        android:textAlignment="center" />
+                        android:textAlignment="inherit" />
 
                 </LinearLayout>
 
@@ -1045,10 +3210,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:visibility="visible">
+                    android:visibility="gone">
 
                     <TextView
-                        android:id="@+id/textView69"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -1063,14 +3227,15 @@
 
                         <TableLayout
                             android:layout_width="154dp"
-                            android:layout_height="205dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_marginEnd="110dp"
                             android:layout_marginRight="110dp">
 
                             <TableRow
-                                android:layout_width="match_parent"
+                                android:id="@+id/tableRow1Layout2"
+                                android:layout_width="147dp"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center">
 
@@ -1090,6 +3255,7 @@
                             </TableRow>
 
                             <TableRow
+                                android:id="@+id/tableRow2Layout2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center">
@@ -1110,6 +3276,7 @@
                             </TableRow>
 
                             <TableRow
+                                android:id="@+id/tableRow3Layout2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center">
@@ -1130,9 +3297,11 @@
                             </TableRow>
 
                             <TableRow
+                                android:id="@+id/tableRow4Layout2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_gravity="center">
+                                android:layout_gravity="center"
+                                android:visibility="gone">
 
                                 <ImageView
                                     android:id="@+id/imagen4Tabla2"
@@ -1154,91 +3323,143 @@
                     </RelativeLayout>
 
                     <TextView
-                        android:id="@+id/textView79"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
                         android:text="Paso 1:"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#020202" />
 
-                    <RelativeLayout
+                    <TextView
+                        android:id="@+id/paso1TCLTamMinimoMuestra"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:text="Para calcular el tamaño mínimo de muestra se hace necesario buscar el valor de en las tablas acumuladas de la distribución normal estándar, donde: en este caso el valor encontrado en tablas es -1.96" />
 
-                        <TextView
-                            android:id="@+id/paso1Layout2"
-                            android:layout_width="284dp"
-                            android:layout_height="wrap_content"
-                            android:text="Para calcular el tamaño mínimo de muestra se hace necesario buscar el valor de en las tablas acumuladas de la distribución normal estándar, donde: en este caso el valor encontrado en tablas es -1.96" />
-
-                        <ImageView
-                            android:id="@+id/botonayuda2"
-                            android:layout_width="42dp"
-                            android:layout_height="32dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="52dp"
-                            android:layout_marginLeft="52dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_toEndOf="@+id/paso1Layout2"
-                            android:layout_toRightOf="@+id/paso1Layout2"
-                            android:background="@drawable/ovalo"
-                            app:srcCompat="@drawable/signodeinterrogacion" />
-
-                        <TextView
-                            android:id="@+id/textView68"
-                            android:layout_width="96dp"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/botonayuda2"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_toEndOf="@+id/paso1Layout2"
-                            android:layout_toRightOf="@+id/paso1Layout2"
-                            android:text="¿Cómo busco los valores en tablas?" />
-                    </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/imageView23"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/pregunta" />
 
                     <TextView
                         android:id="@+id/textView102"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Paso 2:" />
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Paso 2:"
+                        android:textAlignment="center"
+                        android:textColor="#020202" />
 
-                    <RelativeLayout
-                        android:layout_width="395dp"
-                        android:layout_height="311dp">
+                    <TextView
+                        android:id="@+id/paso2TamMinimoMuestra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="El segundo y ultimo paso para calcular el tamaño mínimo de muestra es sustituir los valores correspondientes en la fórmula siguiente:" />
 
-                        <TextView
-                            android:id="@+id/textView103"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="El segundo y ultimo paso para calcular el tamaño mínimo de muestra es sustituir los valores correspondientes en la fórmula siguiente:" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView15"
+                            android:id="@+id/teoremaTamMinimoMuestraMedias"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:background="#FFFFFF"
+                            app:srcCompat="@drawable/tamminimomuestratclmedia1" />
+
+                        <TextView
+                            android:id="@+id/textView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/textView103"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentLeft="true"
-                            android:layout_marginStart="37dp"
-                            android:layout_marginLeft="37dp"
-                            android:layout_marginTop="18dp"
-                            app:srcCompat="@drawable/tamminimomuestratclcaso1" />
+                            android:text="Donde:"
+                            android:textColor="#070707" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="200dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.5"
+                                app:srcCompat="@drawable/gammaenunomenosalfamedios" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="Representa el valor de la probabilidad que encontramos  anteriormente en las tablas de la distribución normal estándar" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView91"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:gravity="center_horizontal"
+                            android:text="Conclusión:"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/conclusionTamMinimoMuestra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutProcedimientoTCLDifMedias"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="Datos:"
+                        android:textAlignment="center" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cardview_light_background">
 
                         <TableLayout
-                            android:layout_width="156dp"
-                            android:layout_height="182dp"
-                            android:layout_below="@+id/textView103"
+                            android:layout_width="154dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
-                            android:layout_marginStart="26dp"
-                            android:layout_marginLeft="26dp"
-                            android:layout_marginTop="4dp"
-                            android:layout_marginEnd="7dp"
-                            android:layout_marginRight="7dp"
-                            android:layout_toEndOf="@+id/imageView15"
-                            android:layout_toRightOf="@+id/imageView15">
+                            android:layout_marginEnd="90dp"
+                            android:layout_marginRight="90dp">
 
                             <TableRow
                                 android:layout_width="match_parent"
@@ -1246,12 +3467,34 @@
                                 android:layout_gravity="center">
 
                                 <ImageView
+                                    android:id="@+id/image1"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_gravity="center|center_horizontal"
-                                    android:src="@drawable/tmuestra" />
+                                    app:srcCompat="@drawable/diferenciadepromedios" />
 
                                 <TextView
+                                    android:id="@+id/dato1TCLDifMedias"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=10.12" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/image2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    app:srcCompat="@drawable/miu1" />
+
+                                <TextView
+                                    android:id="@+id/dato2TCLDifMedias"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal"
@@ -1264,12 +3507,232 @@
                                 android:layout_gravity="center">
 
                                 <ImageView
+                                    android:id="@+id/image3"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_gravity="center|center_horizontal"
-                                    android:src="@drawable/nuevopromedio" />
+                                    app:srcCompat="@drawable/n1" />
 
                                 <TextView
+                                    android:id="@+id/dato3TCLDifMedias"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=10.12" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/image4"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    app:srcCompat="@drawable/sigmacuadrada1" />
+
+                                <TextView
+                                    android:id="@+id/dato4TCLDifMedias"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=40" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/image5"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    app:srcCompat="@drawable/miu2" />
+
+                                <TextView
+                                    android:id="@+id/dato5TCLDifMedias"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=10" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/image6"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    app:srcCompat="@drawable/n2" />
+
+                                <TextView
+                                    android:id="@+id/dato6TCLDifMedias"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=1.25" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRowOpcional"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    app:srcCompat="@drawable/sigmacuadrada2" />
+
+                                <TextView
+                                    android:id="@+id/dato7TCLDifMedias"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=10.12" />
+                            </TableRow>
+
+                        </TableLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:text="Paso 1:"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/paso1TCLDifMedias"
+                        android:layout_width="348dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:gravity="center"
+                        android:text="El primer paso para calcular la probabilidad deseada es calcular el valor del estadístico de prueba Z para la media, que posteriormente buscaremos en las tablas de la distribución acumulada normal estándar. Para realizar el cálculo podemos apoyarnos del siguiente teorema:" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/teoremaTCLDifMedias"
+                            android:layout_width="240dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/teoremadifmediastcl" />
+
+                    </LinearLayout>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/estadisticoz_concepto2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        app:srcCompat="@drawable/pregunta" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Paso 2:"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/Paso2TCLDifMedias"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Despues de sustituir los valores correspondientes en el teorema presentado anteriormente obtenemos que en este caso Z=0.607. Ahora se hace necesario buscar ell valor calculado del estadístico Z en las tablas de la distribución normal estándar" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/pregunta" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="#80D8FF"
+                        android:gravity="center_horizontal"
+                        android:text="Conclusión:"
+                        android:textAlignment="center"
+                        app:drawableStartCompat="@drawable/border"
+                        app:drawableTint="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/conclusionTCLDifMedias"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:text="El valor encontrado en las tablas de la distribución normal estándar es: 0.72808. Por lo tanto la probabilidad de que el promedio muestral sea menor o igual que 10.12 es de: 0.72808 = 72.808%"
+                        android:textAlignment="inherit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutProcedimientoTamMinimoMuestraDifMedias"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView69"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="Datos:"
+                        android:textAlignment="center" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cardview_light_background">
+
+                        <TableLayout
+                            android:layout_width="154dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="90dp"
+                            android:layout_marginRight="90dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/nuevopromedio"
+                                    app:srcCompat="@drawable/dados" />
+
+                                <TextView
+                                    android:id="@+id/dato1TCLDifMedias2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal"
@@ -1285,9 +3748,71 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_gravity="center|center_horizontal"
-                                    android:src="@drawable/desviacionestandar" />
+                                    android:src="@drawable/tmuestra"
+                                    app:srcCompat="@drawable/miu1" />
 
                                 <TextView
+                                    android:id="@+id/dato2TCLDifMedias2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=40" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/tmuestra"
+                                    app:srcCompat="@drawable/sigmacuadrada1" />
+
+                                <TextView
+                                    android:id="@+id/dato3TCLDifMedias2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=40" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    app:srcCompat="@drawable/miu2" />
+
+                                <TextView
+                                    android:id="@+id/dato4TCLDifMedias2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:text="=10" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:src="@drawable/desviacionestandar"
+                                    app:srcCompat="@drawable/sigmacuadrada2" />
+
+                                <TextView
+                                    android:id="@+id/dato5TCLDifMedias2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal"
@@ -1303,18 +3828,71 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_gravity="center|center_horizontal"
-                                    app:srcCompat="@drawable/mediap" />
+                                    android:src="@drawable/nuevopromedio"
+                                    app:srcCompat="@drawable/decero" />
 
                                 <TextView
+                                    android:id="@+id/dato6TCLDifMedias2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|center_horizontal"
-                                    android:text="=10" />
-
+                                    android:text="=10.12" />
                             </TableRow>
 
                         </TableLayout>
                     </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/textView79"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:text="Paso 1:"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/paso1TamMinimoMuestra"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Para calcular el tamaño mínimo de muestra se hace necesario buscar el valor de en las tablas acumuladas de la distribución normal estándar, donde: en este caso el valor encontrado en tablas es -1.96" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        app:srcCompat="@drawable/signodeinterrogacion" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Paso 2:"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="El segundo y ultimo paso para calcular el tamaño mínimo de muestra es sustituir los valores correspondientes en la fórmula siguiente:" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView24"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:background="#FFFFFF"
+                            app:srcCompat="@drawable/tamminimomuestratclmedia1" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>

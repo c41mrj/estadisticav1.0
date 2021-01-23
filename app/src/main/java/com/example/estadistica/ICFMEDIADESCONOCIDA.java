@@ -33,14 +33,16 @@ public class ICFMEDIADESCONOCIDA extends frameworkICF1{
     public double calcLimInf() {
        this.valorTablas = tablas.tablaz(this.confianza);
        this.limInf = this.mediaMuestral-(this.valorTablas*this.multiplicador);
+       this.limInf = tablas.redondeoDecimales(limInf,5);
        return limInf;
     }
 
     @Override
     public double calcLimSup() {
         this.valorTablas = tablas.tablaz(this.confianza);
-        this.limInf = this.mediaMuestral+(this.valorTablas*this.multiplicador);
-        return limInf;
+        this.limSup = this.mediaMuestral+(this.valorTablas*this.multiplicador);
+        tablas.redondeoDecimales(limSup,5);
+        return limSup;
     }
 
 
@@ -56,17 +58,19 @@ public class ICFMEDIADESCONOCIDA extends frameworkICF1{
         if(limite == 'a'){
             this.multiplicador = (this.mediaMuestral - valLimite)/this.desviacionEstandar;
             double aux = multiplicador*Math.sqrt(tamMuestra);
-            aux = tablas.redondeoDecimales(aux,2);
+            aux = tablas.redondeoDecimales(aux,3);
             determinante = aux;
             valorTablas = tablas.tablazetaAcumulada(aux);
             gradoConf = (2*valorTablas)-1;
+            gradoConf = tablas.redondeoDecimales(gradoConf,5);
         }else if(limite == 'b') {
             this.multiplicador = ( this.mediaMuestral - valLimite) / this.desviacionEstandar;
             double aux = multiplicador * Math.sqrt(tamMuestra);
-            aux = tablas.redondeoDecimales(aux,2);
+            aux = tablas.redondeoDecimales(aux,3);
             determinante = aux;
             valorTablas = tablas.tablazetaAcumulada(aux);
             gradoConf = 1-(2*valorTablas);
+            gradoConf = tablas.redondeoDecimales(gradoConf,5);
         }
         return gradoConf;
     }
