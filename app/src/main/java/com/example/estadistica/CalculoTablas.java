@@ -15,6 +15,7 @@ public class CalculoTablas {
   String tabz[][] = new String[32][11];
   String tabzAcumulada[][];
   String tablaTstudent[][];
+  String nada;
   double tabFisher0_9[][];
   double tabFisher0_95[][];
   double tabFisher0_975[][];
