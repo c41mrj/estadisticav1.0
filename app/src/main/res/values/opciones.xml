@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ctm">
+        <item>P(X &lt;=0)</item>
+        <item>P(X>0)</item>
+        <item>Tamaño muestra P(|X-MU|&lt;D0)</item>
+        <item>Tamaño muestra  P(|X-MU|>D0)</item>
+        <item>Tamaño muestra se conoce X0</item>
+    </string-array>
+</resources>
