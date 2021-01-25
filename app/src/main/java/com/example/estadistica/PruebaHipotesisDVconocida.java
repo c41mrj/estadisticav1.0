@@ -259,6 +259,7 @@ public class PruebaHipotesisDVconocida  {
         double potencia = 0;
          estadisticoZeta = ( (limite-NuevaMiu0)/(desv_estandar/Math.sqrt(n)));
          estadisticoZeta = tab.redondeoDecimales(estadisticoZeta,5);
+         valTablas = tab.redondeoDecimales(( tab.tablazetaAcumulada(estadisticoZeta)),4);
         if(swit.equals("caso1")){
             if(estadisticoZeta<-3.59){
                 potencia = 0;

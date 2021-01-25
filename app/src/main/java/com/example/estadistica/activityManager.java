@@ -26,4 +26,8 @@ public interface activityManager {
         botonNota.show();
     }
 
+
+
+
+
 }

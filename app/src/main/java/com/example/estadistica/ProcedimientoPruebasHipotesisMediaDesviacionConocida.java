@@ -16,8 +16,8 @@ import android.widget.Toast;
 
 import com.example.estadistica.databinding.ActivityPruebasDeHipotesisBinding;
 
-public interface ProcedimientoPruebasHipotesisMediaDesviacionConocida extends conversiones {
-    String ola = "";
+public interface ProcedimientoPruebasHipotesisMediaDesviacionConocida {
+
     void actualizarValoresEnTablas();
 
 

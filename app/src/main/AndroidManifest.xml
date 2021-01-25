@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".LogIn"></activity>
+        <activity android:name=".vistaPruebashipotesisMediaDesviacionDesconocida"></activity>
+        <activity android:name=".LogIn" />
         <activity android:name=".PruebasDeHipotesis" />
         <activity android:name=".VistaIntervalosConfianzaDiferenciaProporciones" />
         <activity android:name=".VistaIntervalosConfianzaProporciones" />
