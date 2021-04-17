@@ -145,6 +145,7 @@
                                 android:textSize="12.4sp" />
 
                             <ImageView
+                                android:id="@+id/opcion2"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_gravity="center"
@@ -191,6 +192,7 @@
                                 android:textSize="12.4sp" />
 
                             <ImageView
+                                android:id="@+id/opcion3"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_gravity="center"

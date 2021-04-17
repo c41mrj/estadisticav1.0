@@ -7,23 +7,23 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 
 public class CalculoTablas {
-  ArrayList<String> lineas;
-  ArrayList<String> lineasAcum;
-  ArrayList<String> lineasTabTstudent;
-  ArrayList<String> lineasIzquierdaTabChi;
-  ArrayList<String> lineasTabFisher;
-  String tabz[][] = new String[32][11];
-  String tabzAcumulada[][];
-  String tablaTstudent[][];
-  String nada;
-  double tabFisher0_9[][];
-  double tabFisher0_95[][];
-  double tabFisher0_975[][];
-  double tabFisher0_99[][];
+  private ArrayList<String> lineas;
+  private ArrayList<String> lineasAcum;
+  private ArrayList<String> lineasTabTstudent;
+  private ArrayList<String> lineasIzquierdaTabChi;
+  private ArrayList<String> lineasTabFisher;
+  private String tabz[][] = new String[32][11];
+  private String tabzAcumulada[][];
+  private String tablaTstudent[][];
+  private String nada;
+  private   double tabFisher0_9[][];
+  private double tabFisher0_95[][];
+  private double tabFisher0_975[][];
+  private double tabFisher0_99[][];
 
-  String tabIzquierdaChi[][];
-  String linea_aux[];
-  String linea_aux2[];
+  private String tabIzquierdaChi[][];
+  private String linea_aux[];
+  private String linea_aux2[];
   private double fila;
   private double columna;
   private double columna1;
@@ -483,69 +483,70 @@ public class CalculoTablas {
     }
 
     public double tablaTeStudent(int grados_libertad,float significancia){
-      double result=0;
-      float signif;
-      float signif1;
-      double interpolacion1;
-      double interpolacion2;
-      int liberta;
-      int liberta1;
+        double result=0;
+        float signif;
+        float signif1;
+        double interpolacion1;
+        double interpolacion2;
+        int liberta;
+        int liberta1;
 
-      for(int i = 1; i<38; i++){
-           liberta = Integer.parseInt(this.tablaTstudent[i][0]);
-          if(i<37){
-               liberta1 = Integer.parseInt(this.tablaTstudent[i+1][0]);
-              for(int j = 1; j<46;j++){
-                  signif = Float.parseFloat(this.tablaTstudent[0][j]);
-                  if(j<45){
-                      signif1 = Float.parseFloat(this.tablaTstudent[0][j + 1]);
-                      if ((liberta == grados_libertad) && (signif == significancia)) {
-                          result = Double.parseDouble(this.tablaTstudent[i][j]);
-                          break;
-                      } else if ((liberta == grados_libertad) && (significancia > signif) && (significancia < signif1)) {
-                          result = interpolacion(signif, significancia, signif1, Double.parseDouble(this.tablaTstudent[i][j]), Double.parseDouble(this.tablaTstudent[i][j + 1]));
-                          break;
-                      } else if ((grados_libertad > liberta) && (grados_libertad < liberta1) && (significancia == signif)) {
-                          result = interpolacion(liberta, grados_libertad, liberta1, Double.parseDouble(this.tablaTstudent[i][j]), Double.parseDouble(this.tablaTstudent[i + 1][j]));
-                          break;
-                      } else if (((grados_libertad > liberta) && (grados_libertad < liberta1)) && ((significancia > signif) && (significancia < signif1))) {
-                          interpolacion1 = interpolacion(signif, significancia, signif1, Double.parseDouble(this.tablaTstudent[i][j]), Double.parseDouble(this.tablaTstudent[i][j + 1]));
-                          interpolacion2 = interpolacion(signif, significancia, signif1, Double.parseDouble(this.tablaTstudent[i + 1][j]), Double.parseDouble(this.tablaTstudent[i + 1][j + 1]));
-                          result = interpolacion(liberta, grados_libertad, liberta1, interpolacion1, interpolacion2);
-                          break;
-                      }
-                  }else if(j==45){
-                      if ((liberta == grados_libertad) && (signif == significancia)) {
-                          result = Double.parseDouble(this.tablaTstudent[i][j]);
-                          break;
-                      }else if ((grados_libertad > liberta) && (grados_libertad < liberta1) && (significancia == signif)) {
-                          result = interpolacion(liberta, grados_libertad, liberta1, Double.parseDouble(this.tablaTstudent[i][j]), Double.parseDouble(this.tablaTstudent[i + 1][j]));
-                          break;
-                      }
-                  }
-              }
-          }else if(i==37){
-              for(int j = 1; j<46;j++){
-                  signif = Float.parseFloat(this.tablaTstudent[37][j]);
-                  if(j<45){
-                      signif1 = Float.parseFloat(this.tablaTstudent[37][j+1]);
-                      if ((liberta == grados_libertad) && (signif == significancia)) {
-                          result = Double.parseDouble(this.tablaTstudent[i][j]);
-                          break;
-                      }else if ((liberta == grados_libertad) && ((significancia < signif) && (significancia > signif1))) {
-                          result = interpolacion(signif, significancia, signif1, Double.parseDouble(this.tablaTstudent[i][j]), Double.parseDouble(this.tablaTstudent[i][j + 1]));
-                          break;
-                      }
-                  }else if(j==45){
-                      if ((liberta == grados_libertad) && (signif == significancia)) {
-                          result = Double.parseDouble(this.tablaTstudent[i][j]);
-                          break;
-                      }
-                  }
-              }
-          }
-      }
-      return result;
+        for(int i = 1; i<38; i++){
+            liberta = Integer.parseInt(this.tablaTstudent[i][0]);
+            if(i<37){
+                liberta1 = Integer.parseInt(this.tablaTstudent[i+1][0]);
+                for(int j = 1; j<46;j++){
+                    signif = Float.parseFloat(this.tablaTstudent[0][j]);
+                    if(j<45){
+                        signif1 = Float.parseFloat(this.tablaTstudent[0][j + 1]);
+                        if ((liberta == grados_libertad) && (signif == significancia)) {
+                            result = Float.parseFloat(this.tablaTstudent[i][j]);
+                            break;
+                        } else if ((liberta == grados_libertad) && (significancia > signif) && (significancia < signif1)) {
+                            result = interpolacion(signif, significancia, signif1, Float.parseFloat(this.tablaTstudent[i][j]), Float.parseFloat(this.tablaTstudent[i][j + 1]));
+                            break;
+                        } else if ((grados_libertad > liberta) && (grados_libertad < liberta1) && (significancia == signif)) {
+                            result = interpolacion(liberta, grados_libertad, liberta1, Float.parseFloat(this.tablaTstudent[i][j]), Float.parseFloat(this.tablaTstudent[i + 1][j]));
+                            break;
+                        } else if (((grados_libertad > liberta) && (grados_libertad < liberta1)) && ((significancia > signif) && (significancia < signif1))) {
+                            interpolacion1 = interpolacion(signif, significancia, signif1, Float.parseFloat(this.tablaTstudent[i][j]), Float.parseFloat(this.tablaTstudent[i][j + 1]));
+                            interpolacion2 = interpolacion(signif, significancia, signif1, Float.parseFloat(this.tablaTstudent[i + 1][j]), Float.parseFloat(this.tablaTstudent[i + 1][j + 1]));
+                            result = interpolacion(liberta, grados_libertad, liberta1, interpolacion1, interpolacion2);
+                            break;
+                        }
+                    }else if(j==45){
+                        if ((liberta == grados_libertad) && (signif == significancia)) {
+                            result = Float.parseFloat(this.tablaTstudent[i][j]);
+                            break;
+                        }else if ((grados_libertad > liberta) && (grados_libertad < liberta1) && (significancia == signif)) {
+                            result = interpolacion(liberta, grados_libertad, liberta1, Float.parseFloat(this.tablaTstudent[i][j]), Float.parseFloat(this.tablaTstudent[i + 1][j]));
+                            break;
+                        }
+                    }
+                }
+            }else if(i==37){
+                for(int j = 1; j<46;j++){
+                    signif = Float.parseFloat(this.tablaTstudent[0][j]);
+                    if(j<45){
+                        signif1 = Float.parseFloat(this.tablaTstudent[0][j+1]);
+                        if ((liberta == grados_libertad) && (signif == significancia)) {
+                            result = Float.parseFloat(this.tablaTstudent[i][j]);
+                            result = redondeoDecimales(result,3);
+                            break;
+                        }else if ((liberta == grados_libertad) && ((significancia < signif) && (significancia > signif1))) {
+                            result = interpolacion(signif, significancia, signif1, Float.parseFloat(this.tablaTstudent[i][j]), Float.parseFloat(this.tablaTstudent[i][j + 1]));
+                            break;
+                        }
+                    }else if(j==45){
+                        if ((liberta == grados_libertad) && (signif == significancia)) {
+                            result = Float.parseFloat(this.tablaTstudent[i][j]);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return result;
     }
 
 

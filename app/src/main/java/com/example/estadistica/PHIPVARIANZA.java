@@ -53,7 +53,7 @@ public class PHIPVARIANZA extends CalculoTablas {
 
     public double caso1(){
         limiteSuperior = (this.varianzaPoblacional/(tamMuestra-1))*tablaChi((this.valConfianza),(this.tamMuestra-1));
-        limiteSuperior = redondeoDecimales(limiteSuperior,5);
+        limiteSuperior = redondeoDecimales(limiteSuperior,3);
         valTablas = tablaChi((this.valConfianza),(this.tamMuestra-1));
         if(estaDentroDeLaZonaDeRechazoCaso1()){
             decision = "A un " + this.valConfianza + " de significancia se rechaza la hipotesis nula";
@@ -65,15 +65,15 @@ public class PHIPVARIANZA extends CalculoTablas {
 
     public String caso2(){
         limiteInferior = (this.varianzaPoblacional/(tamMuestra-1))*tablaChi((1-(this.valConfianza/2)),(this.tamMuestra-1));
-        limiteInferior = redondeoDecimales(limiteInferior,5);
+        limiteInferior = redondeoDecimales(limiteInferior,3);
         valTablas = tablaChi(1-(this.valConfianza/2),(this.tamMuestra-1));
         limiteSuperior = (this.varianzaPoblacional/(tamMuestra-1))*tablaChi((this.valConfianza/2),(this.tamMuestra-1));
-        limiteSuperior = redondeoDecimales(limiteSuperior,5);
+        limiteSuperior = redondeoDecimales(limiteSuperior,3);
         valTablas1 = tablaChi((this.valConfianza/2),(this.tamMuestra-1));
         if(estaDentroDeLaZonaDeRechazoCaso2()){
             decision = "A un " + this.valConfianza + " de significancia se rechaza la hipotesis nula";
         }else{
-            decision = "A una " + this.valConfianza + " de significancia no existe evidencia para rechazar la hipotesis nula";
+            decision = "A un " + this.valConfianza + " de significancia no existe evidencia para rechazar la hipotesis nula";
         }
         String intervalo = "[" + this.limiteInferior + "," + this.limiteSuperior + "]";
         return intervalo;
@@ -81,11 +81,12 @@ public class PHIPVARIANZA extends CalculoTablas {
 
     public double caso3(){
         limiteInferior = (this.varianzaPoblacional/(tamMuestra-1))*tablaChi((1-this.valConfianza),(this.tamMuestra-1));
+        limiteInferior = redondeoDecimales(limiteInferior,3);
         valTablas = tablaChi(redondeoDecimales((1-this.valConfianza),4),(this.tamMuestra-1));
         if(estaDentroDeLaZonaDeRechazoCaso3()){
             decision = "A un " + this.valConfianza + " de significancia se rechaza la hipotesis nula";
         }else {
-            decision = "A una " + this.valConfianza + " de significancia no existe evidencia para rechazar la hipotesis nula";
+            decision = "A un " + this.valConfianza + " de significancia no existe evidencia para rechazar la hipotesis nula";
         }
         return limiteInferior;
     }
@@ -94,13 +95,13 @@ public class PHIPVARIANZA extends CalculoTablas {
         this.valTablas = tablaChi(redondeoDecimales((this.valConfianza/2),4),(this.tamMuestra-1));
         this.valTablas1 = tablaChi(redondeoDecimales((1-(this.valConfianza/2)),4),(this.tamMuestra-1));
         this.limiteInferior = (this.varianzaPoblacional/(this.tamMuestra-1))*valTablas1;
-        this.limiteInferior = redondeoDecimales(this.limiteInferior,5);
+        this.limiteInferior = redondeoDecimales(this.limiteInferior,3);
         this.limiteSuperior = (this.varianzaPoblacional1/(this.tamMuestra-1))*valTablas;
-        this.limiteSuperior = redondeoDecimales(this.limiteSuperior,5);
+        this.limiteSuperior = redondeoDecimales(this.limiteSuperior,3);
         if(estaDentroDeLaZonaDeRechazoCaso4()){
             decision = "A un " + this.valConfianza + " de significancia se rechaza la hipotesis nula";
         }else {
-            decision = "A una " + this.valConfianza + " de significancia no existe evidencia para rechazar la hipotesis nula";
+            decision = "A un " + this.valConfianza + " de significancia no existe evidencia para rechazar la hipotesis nula";
         }
         String intervalo = "[" + this.limiteInferior + "," + this.limiteSuperior + "]";
         return intervalo;
@@ -108,8 +109,9 @@ public class PHIPVARIANZA extends CalculoTablas {
 
     public double potenciaPrueba(double limite,double nuevaVarPob){
         estadisticoChi = ((this.tamMuestra-1)*limite)/nuevaVarPob;
-        estadisticoChi = redondeoDecimales(estadisticoChi,4);
+        estadisticoChi = redondeoDecimales(estadisticoChi,3);
         double potencia = tablaChiPotenciaPrueba(estadisticoChi,(this.tamMuestra-1));
+        valTablas = potencia;
         return potencia;
     }
 

@@ -27,6 +27,20 @@ public class MenuPruebasHip extends AppCompatActivity implements OpcionContraste
             }
         });
 
+        lienzo.opcion2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                desplegarContrasteHipotesisMediaVarConocidaODesconocida(false,MenuPruebasHip.this);
+            }
+        });
+
+        lienzo.opcion3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                desplegarContrasteHipotesisVarianza(MenuPruebasHip.this);
+            }
+        });
+
 
     }
 }

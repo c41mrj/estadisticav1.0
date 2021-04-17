@@ -83,8 +83,148 @@ public interface OpcionContrasteHipotesis {
 
         }else{
 
+            LayoutInflater layoutInflater = LayoutInflater.from(context);
+            final View view = layoutInflater.inflate(R.layout.seleccionar_contraste_hipotesis,null);
+            ImageView ayuda1 = view.findViewById(R.id.imageView51);
+            ImageView ayuda2 = view.findViewById(R.id.imageView53);
+            ImageView ayuda3 = view.findViewById(R.id.imageView58);
+            ImageView ayuda4 = view.findViewById(R.id.imageView61);
+
+            ImageView select1 = view.findViewById(R.id.imageView54);
+            ImageView select2 = view.findViewById(R.id.imageView55);
+            ImageView select3 = view.findViewById(R.id.imageView59);
+            ImageView select4 = view.findViewById(R.id.imageView62);
+
+
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+            builder.setCancelable(false)
+                    .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.cancel();
+                        }
+                    });
+
+            AlertDialog alertDialog1 = builder.create();
+            alertDialog1.setView(view);
+            alertDialog1.show();
+
+            select1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context,VistaPruebasDeHipotesisMediaDesviacionDesconocida.class);
+                    intent.putExtra("key","Caso a");
+                    context.startActivity(intent);
+                }
+            });
+
+            select2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context,VistaPruebasDeHipotesisMediaDesviacionDesconocida.class);
+                    intent.putExtra("key","Caso b");
+                    context.startActivity(intent);
+                }
+            });
+
+            select3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context,VistaPruebasDeHipotesisMediaDesviacionDesconocida.class);
+                    intent.putExtra("key","Caso c");
+                    context.startActivity(intent);
+                }
+            });
+
+            select4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context,VistaPruebasDeHipotesisMediaDesviacionDesconocida.class);
+                    intent.putExtra("key","Caso d");
+                    context.startActivity(intent);
+                }
+            });
+
         }
 
     }
+
+    public default void desplegarContrasteHipotesisVarianza(Context context){
+
+        LayoutInflater layoutInflater = LayoutInflater.from(context);
+        final View view = layoutInflater.inflate(R.layout.seleccionar_contraste_hipotesis,null);
+        ImageView ayuda1 = view.findViewById(R.id.imageView51);
+        ImageView ayuda2 = view.findViewById(R.id.imageView53);
+        ImageView ayuda3 = view.findViewById(R.id.imageView58);
+        ImageView ayuda4 = view.findViewById(R.id.imageView61);
+
+        ImageView contraste1 = view.findViewById(R.id.imageView50);
+        contraste1.setImageResource(R.drawable.contrastehipotesiscasoavarianza);
+        ImageView contraste2 = view.findViewById(R.id.imageView52);
+        contraste2.setImageResource(R.drawable.contrastehipotesiscasobvarianza);
+        ImageView contraste3 = view.findViewById(R.id.imageView56);
+        contraste3.setImageResource(R.drawable.contrastehipotesiscasocvarianza);
+        ImageView contraste4 = view.findViewById(R.id.imageView60);
+        contraste4.setImageResource(R.drawable.contrastehipotesiscasodvarianza);
+
+        ImageView select1 = view.findViewById(R.id.imageView54);
+        ImageView select2 = view.findViewById(R.id.imageView55);
+        ImageView select3 = view.findViewById(R.id.imageView59);
+        ImageView select4 = view.findViewById(R.id.imageView62);
+
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+        builder.setCancelable(false)
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+        AlertDialog alertDialog1 = builder.create();
+        alertDialog1.setView(view);
+        alertDialog1.show();
+
+        select1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,VistaPruebasDeHipotesisVarianza.class).putExtra("key","Caso a");
+                context.startActivity(intent);
+            }
+        });
+
+        select2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,VistaPruebasDeHipotesisVarianza.class).putExtra("key","Caso b");
+                context.startActivity(intent);
+            }
+        });
+
+        select3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,VistaPruebasDeHipotesisVarianza.class).putExtra("key","Caso c");
+                context.startActivity(intent);
+            }
+        });
+
+        select4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,VistaPruebasDeHipotesisVarianza.class).putExtra("key","Caso d");
+                context.startActivity(intent);
+            }
+        });
+
+
+    }
+
+
 
 }

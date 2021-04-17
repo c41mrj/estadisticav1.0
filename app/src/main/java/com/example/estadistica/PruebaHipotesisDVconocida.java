@@ -8,7 +8,7 @@ public class PruebaHipotesisDVconocida  {
     private double lim_inf;
     private double lim_sup;
     public String decision;
-    public CalculoTablas tab;
+    private CalculoTablas tab;
     private double valTablas;
     public double estadisticoZeta;
     public double valTablas1,valtTablas2;

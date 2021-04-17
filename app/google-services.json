@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "514293900296",
+    "project_id": "early-access-estadisticav-pro",
+    "storage_bucket": "early-access-estadisticav-pro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514293900296:android:a5b4a08a95de2421425dbd",
+        "android_client_info": {
+          "package_name": "com.example.estadistica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514293900296-4dkhi4s6jkeo46mgs49p0otei2mb6gf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWZuEIr6yvJje9NHKUADMqdtUAUcCBxCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514293900296-4dkhi4s6jkeo46mgs49p0otei2mb6gf7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

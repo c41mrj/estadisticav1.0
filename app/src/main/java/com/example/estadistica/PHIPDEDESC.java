@@ -46,10 +46,10 @@ public class PHIPDEDESC extends CalculoTablas{
         return this.limSup;
     }
 
-    public double getValTablaT(){ return this.valTablaT;}
+    public double getValTablaT(){ return (redondeoDecimales(this.valTablaT,5));}
 
 
-    public double Caso1(){  //menor o igual que
+    public double Caso1(){  //menor o igual que (Caso b)
         double limiteSuperior = this.miu0+(((this.desvEstandar)/Math.sqrt(this.tamMuestra))*tablaTeStudent(this.gradosLibertad,this.signif));
         limiteSuperior = redondeoDecimales(limiteSuperior,4);
         this.limSup = limiteSuperior;
@@ -88,6 +88,7 @@ public class PHIPDEDESC extends CalculoTablas{
         this.limInf =limiteInferior;
         this.limInf = redondeoDecimales(this.limInf,5);
         valTablaT = tablaTeStudent(this.gradosLibertad,this.signif);
+        valTablaT = redondeoDecimales(valTablaT,5);
         if(discriminante2(limiteInferior)){
             this.decision = "A un "+ this.signif + " de significancia se rechaza la hipotesis nula";
             return limiteInferior;
@@ -151,14 +152,13 @@ public class PHIPDEDESC extends CalculoTablas{
                 probabilidad = tablaTstudentPotenciaPrueba(estadisticoT,gradosLibertad);
             }
         }else if(decision.equals("caso2")){
-             estadisticoT = ((this.limInf-nuevaMiu)/(this.desvEstandar/Math.sqrt(this.tamMuestra)));
+            estadisticoT = ((this.limInf-nuevaMiu)/(this.desvEstandar/Math.sqrt(this.tamMuestra)));
             estadisticoT = redondeoDecimales(estadisticoT,4);
             valEstadisticoT = estadisticoT;
             if(estadisticoT<0){
                 estadisticoT = estadisticoT*-1;
                 this.valtTablas1 = tablaTstudentPotenciaPrueba(estadisticoT,this.gradosLibertad);
                 this.valtTablas1 = redondeoDecimales((1-this.valtTablas1),5);
-
             }else if(estadisticoT>=0){
                 this.valtTablas1 = tablaTstudentPotenciaPrueba(estadisticoT,this.gradosLibertad);
             }
@@ -167,12 +167,12 @@ public class PHIPDEDESC extends CalculoTablas{
             valEstadisticoTs = estadisticoTs;
             if(estadisticoTs<0){
                 estadisticoTs = estadisticoTs*-1;
-                this.valTablas2 = tablaTstudentPotenciaPrueba(estadisticoT,this.gradosLibertad);
+                this.valTablas2 = tablaTstudentPotenciaPrueba(estadisticoTs,this.gradosLibertad);
                 this.valTablas2 = redondeoDecimales((1-valTablas2),5);
             }else if(estadisticoTs>=0){
-                this.valTablas2 = tablaTstudentPotenciaPrueba(estadisticoT,this.gradosLibertad);
+                this.valTablas2 = tablaTstudentPotenciaPrueba(estadisticoTs,this.gradosLibertad);
             }
-            probabilidad = valtTablas1 + valTablas2;
+            probabilidad = valtTablas1;
         }
         return probabilidad;
     }
